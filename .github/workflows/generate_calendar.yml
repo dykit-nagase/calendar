@@ -20,12 +20,34 @@ jobs:
         run: |
           pip install pyvips
           pip install requests # 追加
-
+          
       - name: Fetch data from Google Apps Script
         env:
           GAS_DEPLOY_URL: ${{ secrets.GAS_DEPLOY_URL }}
         run: |
-          python -c "import requests, json; r = requests.get('$GAS_DEPLOY_URL'); data = r.json(); with open('vacation_data.json', 'w', encoding='utf-8') as f: json.dump(data, f, ensure_ascii=False)"
+          python <<EOF
+          import requests
+          import json
+          
+          gas_url = '${{ secrets.GAS_DEPLOY_URL }}'
+          
+          try:
+              response = requests.get(gas_url)
+              response.raise_for_status()  # Raise an exception for bad status codes
+              data = response.json()
+              
+              with open('vacation_data.json', 'w', encoding='utf-8') as f:
+                  json.dump(data, f, ensure_ascii=False, indent=2)
+              
+              print("Successfully fetched data and saved to vacation_data.json")
+          except requests.exceptions.RequestException as e:
+              print(f"Error fetching data from GAS: {e}")
+              exit(1)
+          except json.JSONDecodeError as e:
+              print(f"Error decoding JSON from GAS: {e}")
+              print(f"Response content: {response.text}")
+              exit(1)
+          EOF
 
       - name: Run Python script to generate images
         run: python calendar_with_events.py

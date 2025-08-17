@@ -1,0 +1,39 @@
+name: Generate Calendar SVG/PNG
+
+on:
+  workflow_dispatch: # 手動実行用
+
+jobs:
+  generate-images:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install pyvips
+          pip install requests # 追加
+
+      - name: Fetch data from Google Apps Script
+        env:
+          GAS_DEPLOY_URL: ${{ secrets.GAS_DEPLOY_URL }}
+        run: |
+          python -c "import requests, json; r = requests.get('$GAS_DEPLOY_URL'); data = r.json(); with open('vacation_data.json', 'w', encoding='utf-8') as f: json.dump(data, f, ensure_ascii=False)"
+
+      - name: Run Python script to generate images
+        run: python calendar_with_events.py
+
+      - name: Upload generated files
+        uses: actions/upload-artifact@v3
+        with:
+          name: calendar-images
+          path: |
+            calendar.svg
+            calendar.png

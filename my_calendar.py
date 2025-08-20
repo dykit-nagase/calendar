@@ -2,10 +2,10 @@ import json
 import requests
 from datetime import datetime, timedelta
 import pyvips
-import os # Add this line
+import os
+
 
 class CalendarSVGGenerator:
-    # ... (rest of the class code is unchanged) ...
     def __init__(self, cell_width=120, cell_height=140, header_height=40, margin=10, event_height=18):
         self.cell_width = cell_width
         self.cell_height = cell_height
@@ -50,14 +50,16 @@ class CalendarSVGGenerator:
                 data = json.load(f)
                 
                 for row in data:
-                    start_date_str = row.get('開始日')
-                    end_date_str = row.get('終了日')
-                    member = row.get('氏名')
-                    description = row.get('内容')
+                    # キー名をJSONデータに合わせる
+                    start_date_str = row.get('start')
+                    end_date_str = row.get('end')
+                    member = row.get('name')
+                    description = row.get('title')
                     
                     if start_date_str and end_date_str and member and description:
-                        start_date = datetime.strptime(start_date_str, '%Y/%m/%d').date()
-                        end_date = datetime.strptime(end_date_str, '%Y/%m/%d').date()
+                        # 日付形式をISO 8601に合わせる
+                        start_date = datetime.fromisoformat(start_date_str[:-1]).date()
+                        end_date = datetime.fromisoformat(end_date_str[:-1]).date()
                         
                         raw_events.append({
                             'start_date': start_date,

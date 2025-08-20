@@ -50,7 +50,6 @@ class CalendarSVGGenerator:
                 data = json.load(f)
                 
                 for row in data:
-                    # キー名をJSONデータに合わせる
                     start_date_str = row.get('start')
                     end_date_str = row.get('end')
                     member = row.get('name')
@@ -285,39 +284,9 @@ class CalendarSVGGenerator:
             week_type = ["前週", "当週", "次週1", "次週2"][week_idx]
             print(f"  {week_type}: {week[0]} ～ {week[-1]}")
 
-def upload_to_slack(file_path, channel_id, token):
-    """生成した画像をSlackにアップロードする"""
-    print(f"Slackにファイルをアップロード中: {file_path}")
-    url = "https://slack.com/api/files.upload"
-    
-    try:
-        with open(file_path, "rb") as f:
-            files = {'file': f}
-            data = {
-                'token': token,
-                'channels': channel_id
-            }
-            response = requests.post(url, data=data, files=files)
-            
-            if response.status_code == 200 and response.json().get('ok'):
-                print("Slackへのアップロードに成功しました。")
-                print(response.text)
-            else:
-                print(f"Slackへのアップロードに失敗しました。ステータスコード: {response.status_code}")
-                print(response.text)
-    except FileNotFoundError:
-        print(f"エラー: ファイルが見つかりません。{file_path}")
-    except Exception as e:
-        print(f"Slackアップロード中にエラーが発生しました: {e}")
-
-
 def main():
     """メイン関数"""
     
-    # SlackのボットトークンとチャンネルIDを環境変数から取得する
-    SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN")
-    SLACK_CHANNEL_ID = os.environ.get("SLACK_CHANNEL_ID")
-
     generator = CalendarSVGGenerator()
     
     # JSONファイルから予定を読み込む
@@ -335,11 +304,7 @@ def main():
     png_output_file = generator.convert_svg_to_png(svg_output_file)
     
     if png_output_file:
-        # 変換成功の場合、Slackに画像をアップロード
-        if SLACK_BOT_TOKEN and SLACK_CHANNEL_ID:
-            upload_to_slack(png_output_file, SLACK_CHANNEL_ID, SLACK_BOT_TOKEN)
-        else:
-            print("警告: SlackトークンまたはチャンネルIDが環境変数に設定されていません。Slackへのアップロードをスキップします。")
+        print(f"PNGファイルが生成されました: {png_output_file}")
     
     # デバッグ情報を表示
     generator.print_date_info()

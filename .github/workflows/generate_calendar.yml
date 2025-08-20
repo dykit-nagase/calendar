@@ -55,6 +55,9 @@ jobs:
       - name: Run Python script to generate images
         run: python my_calendar.py
 
+      - name: Verify generated files
+        run: ls -al
+
       - name: Commit and push generated files
         run: |
           git config --global user.name "github-actions[bot]"

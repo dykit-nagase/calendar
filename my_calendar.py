@@ -1,7 +1,7 @@
 import json
 import requests
 from datetime import datetime, timedelta
-import pyvips
+import cairosvg
 import os
 
 
@@ -56,7 +56,6 @@ class CalendarSVGGenerator:
                     description = row.get('title')
                     
                     if start_date_str and end_date_str and member and description:
-                        # 日付形式をISO 8601に合わせる
                         start_date = datetime.fromisoformat(start_date_str[:-1]).date()
                         end_date = datetime.fromisoformat(end_date_str[:-1]).date()
                         
@@ -266,13 +265,14 @@ class CalendarSVGGenerator:
         png_file = svg_file.replace('.svg', '.png')
         
         try:
-            image = pyvips.Image.new_from_file(svg_file, dpi=300)
-            image.write_to_file(png_file)
+            with open(svg_file, "rb") as f_svg:
+                svg_data = f_svg.read()
+                cairosvg.svg2png(bytestring=svg_data, write_to=png_file, dpi=300)
             print(f"PNG変換成功: {png_file}")
             return png_file
             
         except Exception as e:
-            print(f"pyvips PNG変換エラー: {e}")
+            print(f"CairoSVG PNG変換エラー: {e}")
             return None
     
     def print_date_info(self, today=None):

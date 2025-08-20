@@ -312,11 +312,9 @@ def upload_to_slack(file_path, channel_id, token):
 def main():
     """メイン関数"""
     
-    # === ここを修正 ===
-    # SlackのボットトークンとチャンネルIDをハードコーディング
-    SLACK_BOT_TOKEN = "xoxb-1741554829287-2300352220727-ERzdFyl7ebtUltKwyS8kTO7G"
-    SLACK_CHANNEL_ID = "C093P031DE0"
-    # ================
+    # SlackのボットトークンとチャンネルIDを環境変数から取得する
+    SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN")
+    SLACK_CHANNEL_ID = os.environ.get("SLACK_CHANNEL_ID")
 
     generator = CalendarSVGGenerator()
     
@@ -336,7 +334,10 @@ def main():
     
     if png_output_file:
         # 変換成功の場合、Slackに画像をアップロード
-        upload_to_slack(png_output_file, SLACK_CHANNEL_ID, SLACK_BOT_TOKEN)
+        if SLACK_BOT_TOKEN and SLACK_CHANNEL_ID:
+            upload_to_slack(png_output_file, SLACK_CHANNEL_ID, SLACK_BOT_TOKEN)
+        else:
+            print("警告: SlackトークンまたはチャンネルIDが環境変数に設定されていません。Slackへのアップロードをスキップします。")
     
     # デバッグ情報を表示
     generator.print_date_info()

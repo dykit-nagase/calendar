@@ -18,14 +18,15 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install system dependencies for CairoSVG
+      - name: Install system dependencies for rendering
         run: |
           sudo apt-get update
-          sudo apt-get install -y libcairo2-dev libfreetype6-dev libpixman-1-dev
+          sudo apt-get install -y libvips librsvg2-dev
+          sudo apt-get install -y fonts-ipaexfont-gothic # 日本語フォントをインストール
 
       - name: Install Python dependencies
         run: |
-          pip install requests cairosvg
+          pip install requests pyvips
 
       - name: Fetch data from Google Apps Script
         env:

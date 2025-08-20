@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -18,13 +18,11 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install libvips
-        run: sudo apt-get update && sudo apt-get install -y libvips
-
-      - name: Install Python dependencies
+      - name: Install libvips and other dependencies
         run: |
-          pip install pyvips
-          pip install requests
+          sudo apt-get update
+          sudo apt-get install -y libvips librsvg2-dev
+          pip install requests pyvips
 
       - name: Fetch data from Google Apps Script
         env:
@@ -56,9 +54,6 @@ jobs:
 
       - name: Run Python script to generate images
         run: python my_calendar.py
-
-      - name: Verify generated files
-        run: ls -al
 
       - name: Commit and push generated files
         run: |

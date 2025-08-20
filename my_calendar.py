@@ -312,9 +312,11 @@ def upload_to_slack(file_path, channel_id, token):
 def main():
     """メイン関数"""
     
+    # === ここを修正 ===
     # SlackのボットトークンとチャンネルIDをハードコーディング
     SLACK_BOT_TOKEN = "xoxb-1741554829287-2300352220727-ERzdFyl7ebtUltKwyS8kTO7G"
     SLACK_CHANNEL_ID = "C093P031DE0"
+    # ================
 
     generator = CalendarSVGGenerator()
     
@@ -346,11 +348,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-}
-このコードでエラーは出ない？
->
-Run python my_calendar.py
-Warning: vacation_data.json not found
-予定データが読み込まれませんでした。処理を終了します。
-Error: Process completed with exit code 0.
-これも出た。

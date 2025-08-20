@@ -1,7 +1,7 @@
 name: Generate Calendar SVG/PNG
 
 on:
-  workflow_dispatch: # 手動実行用
+  workflow_dispatch:
 
 jobs:
   generate-images:
@@ -16,11 +16,14 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install libvips
+        run: sudo apt-get update && sudo apt-get install -y libvips
+
+      - name: Install Python dependencies
         run: |
           pip install pyvips
-          pip install requests # 追加
-          
+          pip install requests
+
       - name: Fetch data from Google Apps Script
         env:
           GAS_DEPLOY_URL: ${{ secrets.GAS_DEPLOY_URL }}
@@ -33,7 +36,7 @@ jobs:
           
           try:
               response = requests.get(gas_url)
-              response.raise_for_status()  # Raise an exception for bad status codes
+              response.raise_for_status()
               data = response.json()
               
               with open('vacation_data.json', 'w', encoding='utf-8') as f:

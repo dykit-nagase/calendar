@@ -51,12 +51,16 @@ jobs:
               print(f"Response content: {response.text}")
               exit(1)
           EOF
-
+          
       - name: Run Python script to generate images
         run: python my_calendar.py
 
-      - name: Upload generated files
-        uses: actions/upload-artifact@v4
-        with:
+      - name: Commit and push generated files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add calendar.svg calendar.png
+          git commit -m "Add generated calendar images"
+          git push
           name: calendar-images
           path: .

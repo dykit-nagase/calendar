@@ -50,7 +50,7 @@ jobs:
           EOF
 
       - name: Run Python script to generate images
-        run: python calendar_with_events.py
+        run: python my_calendar.py
 
       - name: Upload generated files
         uses: actions/upload-artifact@v4

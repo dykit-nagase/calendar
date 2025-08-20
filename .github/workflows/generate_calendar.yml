@@ -51,7 +51,7 @@ jobs:
               print(f"Response content: {response.text}")
               exit(1)
           EOF
-          
+
       - name: Run Python script to generate images
         run: python my_calendar.py
 
@@ -62,5 +62,3 @@ jobs:
           git add calendar.svg calendar.png
           git commit -m "Add generated calendar images"
           git push
-          name: calendar-images
-          path: .

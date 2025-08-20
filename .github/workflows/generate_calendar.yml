@@ -57,6 +57,9 @@ jobs:
 
       - name: Run Python script to generate images
         run: python my_calendar.py
+        
+      - name: Debug List all files
+        run: ls -al
 
       - name: Commit and push generated files
         run: |

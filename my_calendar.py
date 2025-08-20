@@ -5,6 +5,7 @@ import pyvips
 
 
 class CalendarSVGGenerator:
+    # ... (クラスコードは変更なし) ...
     def __init__(self, cell_width=120, cell_height=140, header_height=40, margin=10, event_height=18):
         self.cell_width = cell_width
         self.cell_height = cell_height
@@ -311,11 +312,9 @@ def upload_to_slack(file_path, channel_id, token):
 def main():
     """メイン関数"""
     
-    # === ここを修正 ===
     # SlackのボットトークンとチャンネルIDをハードコーディング
-    SLACK_BOT_TOKEN = "xoxb-1741554829287-2300352220727-ERzdFyl7ebtUltKwyS8kTO7G"  # 実際のトークンに置き換えてください
-    SLACK_CHANNEL_ID = "C093P031DE0"  # 実際のチャンネルIDに置き換えてください
-    # ================
+    SLACK_BOT_TOKEN = "xoxb-1741554829287-2300352220727-ERzdFyl7ebtUltKwyS8kTO7G"
+    SLACK_CHANNEL_ID = "C093P031DE0"
 
     generator = CalendarSVGGenerator()
     
@@ -347,3 +346,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+}
+このコードでエラーは出ない？
+>
+Run python my_calendar.py
+Warning: vacation_data.json not found
+予定データが読み込まれませんでした。処理を終了します。
+Error: Process completed with exit code 0.
+これも出た。

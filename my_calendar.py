@@ -2,10 +2,10 @@ import json
 import requests
 from datetime import datetime, timedelta
 import pyvips
-
+import os # Add this line
 
 class CalendarSVGGenerator:
-    # ... (クラスコードは変更なし) ...
+    # ... (rest of the class code is unchanged) ...
     def __init__(self, cell_width=120, cell_height=140, header_height=40, margin=10, event_height=18):
         self.cell_width = cell_width
         self.cell_height = cell_height

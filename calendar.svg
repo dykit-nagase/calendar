@@ -84,10 +84,10 @@
 <text class="day-number" x="1158.0" y="573.0">13</text>
 <rect x="22.0" y="142.0" width="1157.0" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="156.0">田中: 夏季休暇</text>
-<rect x="22.0" y="163.0" width="1157.0" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<rect x="22.0" y="163.0" width="1157.0" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="177.0">佐藤: リモートワーク</text>
 <rect x="22.0" y="287.0" width="991.2857142857144" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="301.0">田中: 夏季休暇</text>
-<rect x="22.0" y="308.0" width="991.2857142857144" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<rect x="22.0" y="308.0" width="991.2857142857144" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="322.0">佐藤: リモートワーク</text>
 </svg>

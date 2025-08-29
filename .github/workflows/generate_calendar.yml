@@ -2,6 +2,13 @@ name: Generate Calendar SVG/PNG
 
 on:
   workflow_dispatch:
+    inputs:
+      year:
+        description: 'Target year (e.g., 2025)'
+        required: false
+      month:
+        description: 'Target month (1-12)'
+        required: false
 
 jobs:
   generate-images:
@@ -12,6 +19,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -21,45 +30,43 @@ jobs:
       - name: Install system dependencies for rendering
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-ipaexfont-gothic libcairo2-dev libfreetype6-dev libpixman-1-dev
-          
+          # CJKフォントを確実に入れる（文字化け対策）
+          sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra fonts-ipaexfont-gothic \
+                                  libcairo2-dev libfreetype6-dev libpixman-1-dev
+          fc-cache -f -v
+
       - name: Install Python dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install requests cairosvg
 
       - name: Fetch data from Google Apps Script
         env:
           GAS_DEPLOY_URL: ${{ secrets.GAS_DEPLOY_URL }}
         run: |
-          python <<EOF
-          import requests
-          import json
-          
-          gas_url = '${{ secrets.GAS_DEPLOY_URL }}'
-          
-          try:
-              response = requests.get(gas_url)
-              response.raise_for_status()
-              data = response.json()
-              
-              with open('vacation_data.json', 'w', encoding='utf-8') as f:
-                  json.dump(data, f, ensure_ascii=False, indent=2)
-              
-              print("Successfully fetched data and saved to vacation_data.json")
-          except requests.exceptions.RequestException as e:
-              print(f"Error fetching data from GAS: {e}")
-              exit(1)
-          except json.JSONDecodeError as e:
-              print(f"Error decoding JSON from GAS: {e}")
-              print(f"Response content: {response.text}")
-              exit(1)
-          EOF
+          python - << 'PY'
+          import json, os, sys, requests
+          url = os.environ.get("GAS_DEPLOY_URL")
+          if not url:
+            print("GAS_DEPLOY_URL is not set; creating empty vacation_data.json")
+            with open("vacation_data.json","w",encoding="utf-8") as f:
+              json.dump([], f, ensure_ascii=False, indent=2)
+            sys.exit(0)
+          r = requests.get(url, timeout=30)
+          r.raise_for_status()
+          data = r.json()
+          with open("vacation_data.json","w",encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+          print("Saved vacation_data.json with", len(data), "items.")
+          PY
 
-      - name: Run Python script to generate images
-        run: python my_calendar.py
-        
-      - name: Debug List all files
-        run: ls -al
+      - name: Generate calendar SVG/PNG
+        env:
+          TARGET_YEAR: ${{ inputs.year }}
+          TARGET_MONTH: ${{ inputs.month }}
+        run: |
+          python my_calendar.py
+          ls -l calendar.*
 
       - name: Commit and push generated files
         run: |
@@ -67,16 +74,15 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
-          # 生成物をすべてステージ（未追跡ファイル含む）
           git add -A
 
-          # ステージ済み差分が無ければ終了（未追跡も含めて判定）
+          # 変更がなければ成功で終了
           if git diff --cached --quiet; then
             echo "No changes to commit. Exiting successfully."
             exit 0
           fi
 
-          # リモート更新を取り込んでからコミット & プッシュ
+          # リベースで衝突回避
           git pull --rebase origin "${GITHUB_REF_NAME:-${GITHUB_HEAD_REF:-main}}" || true
-          git commit -m "Add/update generated calendar images and data"
+          git commit -m "Update generated calendar images (SVG/PNG)"
           git push origin HEAD

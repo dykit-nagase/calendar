@@ -1,4 +1,4 @@
-name: Post Calendar to Slack (8AM JST)
+name: Post Calendar to Slack
 
 on:
   workflow_dispatch: {}

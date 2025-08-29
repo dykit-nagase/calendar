@@ -1,200 +1,93 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="860" height="540" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <style>
-            .header { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
-            .date { font-family: Arial, sans-serif; font-size: 14px; text-anchor: middle; }
-            .month { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; text-anchor: start; }
-            .day-number { font-family: Arial, sans-serif; font-size: 14px; text-anchor: end; }
-            .event { font-family: Arial, sans-serif; font-size: 10px; text-anchor: start; }
-            .event-rect { stroke: #666666; stroke-width: 0.5; }
-            .cell { fill: white; stroke: #cccccc; stroke-width: 1; }
-            .saturday { fill: #e3f2fd; }
-            .sunday { fill: #ffebee; }
-            .today { fill: #ffffa8; stroke: #cccccc; stroke-width: 1; }
-        </style>
-    </defs>
-    
-    <rect width="860" height="540" fill="#fafafa"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+  <style>
+    @charset "UTF-8";
+    .title {
+      font-family: "Noto Sans CJK JP","Noto Sans JP","IPAexGothic",
+                   "Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;
+      font-size: 28px; font-weight: 700; fill: #333;
+    }
+    .weekday, .day-number, .event {
+      font-family: "Noto Sans CJK JP","Noto Sans JP","IPAexGothic",
+                   "Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;
+      fill: #222;
+    }
+    .weekday { font-size: 16px; font-weight: 600; }
+    .day-number { font-size: 14px; }
+    .event { font-size: 14px; }
+    .cell { fill: #fff; stroke: #ddd; }
+  </style>
+  <rect x="0" y="0" width="1200" height="720" fill="#fff"/>
+  <text class="title" x="20" y="60">2025-08-17 〜 2025-09-13（4週間表示）</text>
 
-    <rect x="10" y="10" width="120" height="40" 
-          class="cell" fill="#e0e0e0"/>
-    <text x="70" y="35" 
-          class="header">月</text>
-    <rect x="130" y="10" width="120" height="40" 
-          class="cell" fill="#e0e0e0"/>
-    <text x="190" y="35" 
-          class="header">火</text>
-    <rect x="250" y="10" width="120" height="40" 
-          class="cell" fill="#e0e0e0"/>
-    <text x="310" y="35" 
-          class="header">水</text>
-    <rect x="370" y="10" width="120" height="40" 
-          class="cell" fill="#e0e0e0"/>
-    <text x="430" y="35" 
-          class="header">木</text>
-    <rect x="490" y="10" width="120" height="40" 
-          class="cell" fill="#e0e0e0"/>
-    <text x="550" y="35" 
-          class="header">金</text>
-    <rect x="610" y="10" width="120" height="40" 
-          class="cell" fill="#e0e0e0"/>
-    <text x="670" y="35" 
-          class="header">土</text>
-    <rect x="730" y="10" width="120" height="40" 
-          class="cell" fill="#e0e0e0"/>
-    <text x="790" y="35" 
-          class="header">日</text>
-    <rect x="10" y="50" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="122" y="70" 
-          class="day-number">18</text>
-    <rect x="130" y="50" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="242" y="70" 
-          class="day-number">19</text>
-    <rect x="250" y="50" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="362" y="70" 
-          class="day-number">20</text>
-    <rect x="370" y="50" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="482" y="70" 
-          class="day-number">21</text>
-    <rect x="490" y="50" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="602" y="70" 
-          class="day-number">22</text>
-    <rect x="610" y="50" width="120" height="120" 
-          class="cell saturday"/>
-    
-    <text x="722" y="70" 
-          class="day-number">23</text>
-    <rect x="730" y="50" width="120" height="120" 
-          class="cell sunday"/>
-    
-    <text x="842" y="70" 
-          class="day-number">24</text>
-    <rect x="10" y="170" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="122" y="190" 
-          class="day-number">25</text>
-    <rect x="130" y="170" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="242" y="190" 
-          class="day-number">26</text>
-    <rect x="250" y="170" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="362" y="190" 
-          class="day-number">27</text>
-    <rect x="370" y="170" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="482" y="190" 
-          class="day-number">28</text>
-    <rect x="490" y="170" width="120" height="120" 
-          class="cell today"/>
-    
-    <text x="602" y="190" 
-          class="day-number">29</text>
-    <rect x="610" y="170" width="120" height="120" 
-          class="cell saturday"/>
-    
-    <text x="722" y="190" 
-          class="day-number">30</text>
-    <rect x="730" y="170" width="120" height="120" 
-          class="cell sunday"/>
-    
-    <text x="842" y="190" 
-          class="day-number">31</text>
-    <rect x="10" y="290" width="120" height="120" 
-          class="cell"/>
-    <text x="18" y="310" class="month">9月</text>
-    <text x="122" y="310" 
-          class="day-number">1</text>
-    <rect x="130" y="290" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="242" y="310" 
-          class="day-number">2</text>
-    <rect x="250" y="290" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="362" y="310" 
-          class="day-number">3</text>
-    <rect x="370" y="290" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="482" y="310" 
-          class="day-number">4</text>
-    <rect x="490" y="290" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="602" y="310" 
-          class="day-number">5</text>
-    <rect x="610" y="290" width="120" height="120" 
-          class="cell saturday"/>
-    
-    <text x="722" y="310" 
-          class="day-number">6</text>
-    <rect x="730" y="290" width="120" height="120" 
-          class="cell sunday"/>
-    
-    <text x="842" y="310" 
-          class="day-number">7</text>
-    <rect x="10" y="410" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="122" y="430" 
-          class="day-number">8</text>
-    <rect x="130" y="410" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="242" y="430" 
-          class="day-number">9</text>
-    <rect x="250" y="410" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="362" y="430" 
-          class="day-number">10</text>
-    <rect x="370" y="410" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="482" y="430" 
-          class="day-number">11</text>
-    <rect x="490" y="410" width="120" height="120" 
-          class="cell"/>
-    
-    <text x="602" y="430" 
-          class="day-number">12</text>
-    <rect x="610" y="410" width="120" height="120" 
-          class="cell saturday"/>
-    
-    <text x="722" y="430" 
-          class="day-number">13</text>
-    <rect x="730" y="410" width="120" height="120" 
-          class="cell sunday"/>
-    
-    <text x="842" y="430" 
-          class="day-number">14</text>
-    <rect x="12" y="80" width="836" height="18" 
-          fill="#bae1ff" class="event-rect"/>
-    <text x="14" y="92" class="event">田中: 夏季休暇</text>
-    <rect x="12" y="100" width="836" height="18" 
-          fill="#ffb3ba" class="event-rect"/>
-    <text x="14" y="112" class="event">佐藤: リモートワーク</text>
-    <rect x="12" y="200" width="596" height="18" 
-          fill="#bae1ff" class="event-rect"/>
-    <text x="14" y="212" class="event">田中: 夏季休暇</text>
-    <rect x="12" y="220" width="596" height="18" 
-          fill="#ffb3ba" class="event-rect"/>
-    <text x="14" y="232" class="event">佐藤: リモートワーク</text>
+<text class="weekday" x="28.0" y="112">日</text>
+<text class="weekday" x="193.71428571428572" y="112">月</text>
+<text class="weekday" x="359.42857142857144" y="112">火</text>
+<text class="weekday" x="525.1428571428571" y="112">水</text>
+<text class="weekday" x="690.8571428571429" y="112">木</text>
+<text class="weekday" x="856.5714285714287" y="112">金</text>
+<text class="weekday" x="1022.2857142857143" y="112">土</text>
+<rect class="cell" x="20.0" y="120.0" width="165.71428571428572" height="145.0" fill="#fde2e2" stroke="#ddd"/>
+<text class="day-number" x="163.71428571428572" y="138.0">17</text>
+<rect class="cell" x="185.71428571428572" y="120.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="329.42857142857144" y="138.0">18</text>
+<rect class="cell" x="351.42857142857144" y="120.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="495.1428571428571" y="138.0">19</text>
+<rect class="cell" x="517.1428571428571" y="120.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="660.8571428571429" y="138.0">20</text>
+<rect class="cell" x="682.8571428571429" y="120.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="826.5714285714287" y="138.0">21</text>
+<rect class="cell" x="848.5714285714287" y="120.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="992.2857142857144" y="138.0">22</text>
+<rect class="cell" x="1014.2857142857143" y="120.0" width="165.71428571428572" height="145.0" fill="#e5f1ff" stroke="#ddd"/>
+<text class="day-number" x="1158.0" y="138.0">23</text>
+<rect class="cell" x="20.0" y="265.0" width="165.71428571428572" height="145.0" fill="#fde2e2" stroke="#ddd"/>
+<text class="day-number" x="163.71428571428572" y="283.0">24</text>
+<rect class="cell" x="185.71428571428572" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="329.42857142857144" y="283.0">25</text>
+<rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="495.1428571428571" y="283.0">26</text>
+<rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="660.8571428571429" y="283.0">27</text>
+<rect class="cell" x="682.8571428571429" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="826.5714285714287" y="283.0">28</text>
+<rect class="cell" x="848.5714285714287" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
+<text class="day-number" x="992.2857142857144" y="283.0">29</text>
+<rect class="cell" x="1014.2857142857143" y="265.0" width="165.71428571428572" height="145.0" fill="#e5f1ff" stroke="#ddd"/>
+<text class="day-number" x="1158.0" y="283.0">30</text>
+<rect class="cell" x="20.0" y="410.0" width="165.71428571428572" height="145.0" fill="#fde2e2" stroke="#ddd"/>
+<text class="day-number" x="163.71428571428572" y="428.0">31</text>
+<rect class="cell" x="185.71428571428572" y="410.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="329.42857142857144" y="428.0">1</text>
+<rect class="cell" x="351.42857142857144" y="410.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="495.1428571428571" y="428.0">2</text>
+<rect class="cell" x="517.1428571428571" y="410.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="660.8571428571429" y="428.0">3</text>
+<rect class="cell" x="682.8571428571429" y="410.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="826.5714285714287" y="428.0">4</text>
+<rect class="cell" x="848.5714285714287" y="410.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="992.2857142857144" y="428.0">5</text>
+<rect class="cell" x="1014.2857142857143" y="410.0" width="165.71428571428572" height="145.0" fill="#e5f1ff" stroke="#ddd"/>
+<text class="day-number" x="1158.0" y="428.0">6</text>
+<rect class="cell" x="20.0" y="555.0" width="165.71428571428572" height="145.0" fill="#fde2e2" stroke="#ddd"/>
+<text class="day-number" x="163.71428571428572" y="573.0">7</text>
+<rect class="cell" x="185.71428571428572" y="555.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="329.42857142857144" y="573.0">8</text>
+<rect class="cell" x="351.42857142857144" y="555.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="495.1428571428571" y="573.0">9</text>
+<rect class="cell" x="517.1428571428571" y="555.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="660.8571428571429" y="573.0">10</text>
+<rect class="cell" x="682.8571428571429" y="555.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="826.5714285714287" y="573.0">11</text>
+<rect class="cell" x="848.5714285714287" y="555.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<text class="day-number" x="992.2857142857144" y="573.0">12</text>
+<rect class="cell" x="1014.2857142857143" y="555.0" width="165.71428571428572" height="145.0" fill="#e5f1ff" stroke="#ddd"/>
+<text class="day-number" x="1158.0" y="573.0">13</text>
+<rect x="22.0" y="142.0" width="1157.0" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="156.0">田中: 夏季休暇</text>
+<rect x="22.0" y="163.0" width="1157.0" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="177.0">佐藤: リモートワーク</text>
+<rect x="22.0" y="287.0" width="991.2857142857144" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="301.0">田中: 夏季休暇</text>
+<rect x="22.0" y="308.0" width="991.2857142857144" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="322.0">佐藤: リモートワーク</text>
 </svg>

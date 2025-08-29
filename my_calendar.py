@@ -193,7 +193,7 @@ def draw_events(matrix, events):
 
         y0 = top + r * CELL_H
         for li, ev in placed:
-            color = EVENT_COLORS[(hash(ev["name"]) % len(EVENT_COLORS))]
+            color = color_for_person(ev.get("name") or ev.get("title") or "")
 
             def day_to_x(d: date):
                 c = (d.weekday() + 1) % 7  # 日=0..土=6

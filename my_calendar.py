@@ -4,6 +4,8 @@
 import json
 import os
 from datetime import date, datetime, timedelta, timezone
+import hashlib
+
 
 # ====== 出力ファイル ======
 OUTPUT_SVG = "calendar.svg"
@@ -31,6 +33,17 @@ TODAY_BG = "#fff8b3"
 EVENT_COLORS = [
     "#cfe8ff", "#ffc7ce", "#d5f5e3", "#f9e79f", "#f5cba7",
 ]
+
+_name_color_cache = {}
+def color_for_person(raw_name: str) -> str:
+    name = (raw_name or "").strip()
+    if not name:
+        name = "(no-name)"  # 空なら共通のキーに
+    if name not in _name_color_cache:
+        h = hashlib.md5(name.encode("utf-8")).hexdigest()
+        idx = int(h[:8], 16) % len(EVENT_COLORS)
+        _name_color_cache[name] = EVENT_COLORS[idx]
+    return _name_color_cache[name]
 
 # ====== ユーティリティ ======
 def parse_iso(dt_str: str) -> datetime:

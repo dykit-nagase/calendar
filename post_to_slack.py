@@ -13,7 +13,7 @@ SLACK_CHANNEL_ID = os.environ.get("SLACK_CHANNEL_ID")
 FILE_PATH = os.environ.get("FILE_PATH", "calendar.png")
 jst = datetime.datetime.utcnow() + datetime.timedelta(hours=9)
 today_str = jst.strftime("%Y-%m-%d")
-INITIAL_COMMENT = f"本日（{today_str} JST）の離脱期間一覧カレンダーです。"
+INITIAL_COMMENT = f"本日（{today_str}）の離脱期間一覧カレンダーです。"
 FILE_TITLE = os.environ.get("FILE_TITLE", "4-week calendar")
 TIMEOUT = float(os.environ.get("SLACK_HTTP_TIMEOUT", "30"))
 
@@ -70,12 +70,6 @@ def main():
     if not resp.ok:
         _fail(f"binary upload failed (HTTP {resp.status_code}): {resp.text[:200]}")
 
-    # 3) アップロード完了を通知し、チャンネルに共有
-    # initial_comment をここで添える
-    if not INITIAL_COMMENT:
-        # JSTの日付を既定文に差し込む
-        jst = datetime.datetime.utcnow() + datetime.timedelta(hours=9)
-        INITIAL_COMMENT = f"本日（{jst.strftime('%Y-%m-%d')} JST）の4週間カレンダーです。"
 
     print(f"[3/3] Completing upload & sharing to channel {SLACK_CHANNEL_ID}")
     payload = {

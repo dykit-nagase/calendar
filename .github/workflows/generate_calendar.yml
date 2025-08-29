@@ -1,14 +1,7 @@
-name: Generate Calendar SVG/PNG
+name: Generate Rolling 4-Week Calendar
 
 on:
-  workflow_dispatch:
-    inputs:
-      year:
-        description: 'Target year (e.g., 2025)'
-        required: false
-      month:
-        description: 'Target month (1-12)'
-        required: false
+  workflow_dispatch: {}
 
 jobs:
   generate-images:
@@ -30,7 +23,7 @@ jobs:
       - name: Install system dependencies for rendering
         run: |
           sudo apt-get update
-          # CJKフォントを確実に入れる（文字化け対策）
+          # 日本語フォント（文字化け対策）
           sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra fonts-ipaexfont-gothic \
                                   libcairo2-dev libfreetype6-dev libpixman-1-dev
           fc-cache -f -v
@@ -60,10 +53,7 @@ jobs:
           print("Saved vacation_data.json with", len(data), "items.")
           PY
 
-      - name: Generate calendar SVG/PNG
-        env:
-          TARGET_YEAR: ${{ inputs.year }}
-          TARGET_MONTH: ${{ inputs.month }}
+      - name: Generate rolling 4-week calendar (SVG/PNG)
         run: |
           python my_calendar.py
           ls -l calendar.*
@@ -76,13 +66,11 @@ jobs:
 
           git add -A
 
-          # 変更がなければ成功で終了
           if git diff --cached --quiet; then
             echo "No changes to commit. Exiting successfully."
             exit 0
           fi
 
-          # リベースで衝突回避
           git pull --rebase origin "${GITHUB_REF_NAME:-${GITHUB_HEAD_REF:-main}}" || true
-          git commit -m "Update generated calendar images (SVG/PNG)"
+          git commit -m "Update rolling 4-week calendar (SVG/PNG)"
           git push origin HEAD

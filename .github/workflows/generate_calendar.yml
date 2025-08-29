@@ -65,13 +65,18 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
-          # Check for changed or new files
-          if git diff-index --quiet HEAD --; then
-              echo "No files to commit. The working tree is clean."
-              exit 0
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+          # 生成物をすべてステージ（未追跡ファイル含む）
+          git add -A
+
+          # ステージ済み差分が無ければ終了（未追跡も含めて判定）
+          if git diff --cached --quiet; then
+            echo "No changes to commit. Exiting successfully."
+            exit 0
           fi
-          
-          git add .
-          git commit -m "Add generated calendar images and data"
-          git push
+
+          # リモート更新を取り込んでからコミット & プッシュ
+          git pull --rebase origin "${GITHUB_REF_NAME:-${GITHUB_HEAD_REF:-main}}" || true
+          git commit -m "Add/update generated calendar images and data"
+          git push origin HEAD

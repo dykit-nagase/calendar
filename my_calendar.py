@@ -224,7 +224,7 @@ def main():
     end_d = this_week_start + timedelta(days=7*3 - 1)     # 次2週の週末（4週分合計）
 
     # タイトル（範囲を表示）
-    title_text = f"{start_d.strftime('%Y-%m-%d')} 〜 {end_d.strftime('%Y-%m-%d')}（4週間表示）"
+    title_text = f"{start_d.strftime('%Y-%m-%d')} 〜 {end_d.strftime('%Y-%m-%d')}"
 
     # マトリクス（4行×7列）
     matrix = build_matrix(start_d, ROWS, COLS)

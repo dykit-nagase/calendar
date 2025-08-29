@@ -2,6 +2,9 @@ name: Generate Rolling 4-Week Calendar
 
 on:
   workflow_dispatch: {}
+  schedule:
+    - cron: '0 21 * * *'
+
 
 jobs:
   generate-images:

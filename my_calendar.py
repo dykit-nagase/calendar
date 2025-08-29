@@ -1,318 +1,299 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import json
-import requests
-from datetime import datetime, timedelta
-import cairosvg
+import math
 import os
+from datetime import date, datetime, timedelta, timezone
 
+# ====== 設定 ======
+OUTPUT_SVG = "calendar.svg"
+OUTPUT_PNG = "calendar.png"
+DATA_JSON = "vacation_data.json"  # GASから保存されたJSON
 
-class CalendarSVGGenerator:
-    def __init__(self, cell_width=120, cell_height=140, header_height=40, margin=10, event_height=18):
-        self.cell_width = cell_width
-        self.cell_height = cell_height
-        self.header_height = header_height
-        self.margin = margin
-        self.event_height = event_height
-        self.week_days = ['月', '火', '水', '木', '金', '土', '日']
-        self.member_colors = {}
-        self.events = []
-        
-    def get_week_range(self, target_date):
-        days_since_monday = target_date.weekday()
-        monday = target_date - timedelta(days=days_since_monday)
-        
-        week_dates = []
-        for i in range(7):
-            week_dates.append(monday + timedelta(days=i))
-        
-        return week_dates
-    
-    def get_four_week_range(self, today=None):
-        if today is None:
-            today = datetime.now().date()
-        
-        current_week = self.get_week_range(today)
-        prev_week_start = current_week[0] - timedelta(days=7)
-        prev_week = self.get_week_range(prev_week_start)
-        next_week1_start = current_week[0] + timedelta(days=7)
-        next_week1 = self.get_week_range(next_week1_start)
-        next_week2_start = current_week[0] + timedelta(days=14)
-        next_week2 = self.get_week_range(next_week2_start)
-        
-        all_weeks = [prev_week, current_week, next_week1, next_week2]
-        return all_weeks, today
-    
-    def load_events_from_json(self, json_file):
-        raw_events = []
-        members = set()
-        
-        try:
-            with open(json_file, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                
-                for row in data:
-                    start_date_str = row.get('start')
-                    end_date_str = row.get('end')
-                    member = row.get('name')
-                    description = row.get('title')
-                    
-                    if start_date_str and end_date_str and member and description:
-                        start_date = datetime.fromisoformat(start_date_str[:-1]).date()
-                        end_date = datetime.fromisoformat(end_date_str[:-1]).date()
-                        
-                        raw_events.append({
-                            'start_date': start_date,
-                            'end_date': end_date,
-                            'member': member,
-                            'description': description
-                        })
-                        members.add(member)
-        except FileNotFoundError:
-            print(f"Warning: {json_file} not found")
-            return
-        except Exception as e:
-            print(f"JSONファイルの読み込みエラー: {e}")
-            return
+# 日本語表示
+WEEKDAYS_JP = ["日", "月", "火", "水", "木", "金", "土"]
 
-        self.events = self.remove_duplicate_events(raw_events)
-        unique_members = sorted(list(members))
-        self.assign_member_colors(unique_members)
+# レイアウト
+WIDTH = 1200
+HEIGHT = 800
+MARGIN = 20
+HEADER_H = 70
+WEEKDAY_H = 30
+CELL_W = (WIDTH - MARGIN * 2) / 7
+CELL_H = (HEIGHT - MARGIN * 2 - HEADER_H - WEEKDAY_H) / 6
 
-    def remove_duplicate_events(self, events):
-        event_dict = {}
-        for event in events:
-            key = (event['member'], event['start_date'], event['end_date'])
-            event_dict[key] = event
-        
-        return list(event_dict.values())
-    
-    def assign_member_colors(self, members):
-        colors = [
-            '#ffb3ba', '#bae1ff', '#baffc9', '#ffffba', '#ffdfba', 
-            '#e0bbe4', '#d4d4aa', '#ffc9c9', '#c9e4ff', '#d4ffd4', 
-            '#ffffe0', '#ffe4e1', '#f0f8ff', '#f0fff0', '#ffefd5', 
-            '#e6e6fa', '#f5deb3', '#ffe4b5', '#dda0dd', '#98fb98'
-        ]
-        
-        for i, member in enumerate(members):
-            self.member_colors[member] = colors[i % len(colors)]
-    
-    def get_events_for_date_range(self, start_date, end_date):
-        return [event for event in self.events
-                if not (event['end_date'] < start_date or event['start_date'] > end_date)]
-    
-    def calculate_event_layout(self, weeks):
-        all_dates = []
-        for week in weeks:
-            all_dates.extend(week)
-        
-        start_date = all_dates[0]
-        end_date = all_dates[-1]
-        
-        relevant_events = self.get_events_for_date_range(start_date, end_date)
-        
-        date_event_positions = {}
-        for date in all_dates:
-            date_event_positions[date] = []
-        
-        for event in relevant_events:
-            event_dates = []
-            current_date = max(event['start_date'], start_date)
-            while current_date <= min(event['end_date'], end_date):
-                event_dates.append(current_date)
-                current_date += timedelta(days=1)
-            
-            position = 0
-            while True:
-                can_place = True
-                for date in event_dates:
-                    if position < len(date_event_positions[date]) and date_event_positions[date][position] is not None:
-                        can_place = False
-                        break
-                
-                if can_place:
-                    for date in event_dates:
-                        while len(date_event_positions[date]) <= position:
-                            date_event_positions[date].append(None)
-                        date_event_positions[date][position] = event
-                    event['layout_position'] = position
-                    break
-                
-                position += 1
-        
-        return date_event_positions
-    
-    def generate_svg(self, output_file="calendar.svg", today=None):
-        weeks, today_date = self.get_four_week_range(today)
-        date_event_positions = self.calculate_event_layout(weeks)
-        
-        max_events = max([len(positions) for positions in date_event_positions.values()] + [0])
-        if max_events > 0:
-            self.cell_height = max(120, 60 + max_events * (self.event_height + 2))
-        
-        total_width = 7 * self.cell_width + 2 * self.margin
-        total_height = self.header_height + 4 * self.cell_height + 2 * self.margin
-        
-        svg_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg width="{total_width}" height="{total_height}" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <style>
-            .header {{ font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }}
-            .date {{ font-family: Arial, sans-serif; font-size: 14px; text-anchor: middle; }}
-            .month {{ font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; text-anchor: start; }}
-            .day-number {{ font-family: Arial, sans-serif; font-size: 14px; text-anchor: end; }}
-            .event {{ font-family: Arial, sans-serif; font-size: 10px; text-anchor: start; }}
-            .event-rect {{ stroke: #666666; stroke-width: 0.5; }}
-            .cell {{ fill: white; stroke: #cccccc; stroke-width: 1; }}
-            .saturday {{ fill: #e3f2fd; }}
-            .sunday {{ fill: #ffebee; }}
-            .today {{ fill: #ffffa8; stroke: #cccccc; stroke-width: 1; }}
-        </style>
-    </defs>
-    
-    <rect width="{total_width}" height="{total_height}" fill="#fafafa"/>
+# 休日配色
+SUNDAY_BG = "#fde2e2"
+SATURDAY_BG = "#e5f1ff"
+TODAY_BG = "#fff8b3"
+
+# イベント色（人物で色分けしたいときに増やしていく）
+EVENT_COLORS = [
+    "#cfe8ff",  # light blue
+    "#ffc7ce",  # light pink
+    "#d5f5e3",  # light green
+    "#f9e79f",  # light yellow
+    "#f5cba7",  # light orange
+]
+
+# ====== ユーティリティ ======
+def parse_iso(dt_str: str) -> datetime:
+    # "2025-08-11T15:00:00.000Z" → ISO対応
+    s = dt_str.replace("Z", "+00:00")
+    try:
+        return datetime.fromisoformat(s)
+    except ValueError:
+        # 末尾にタイムゾーンが無い簡易形にも対応
+        return datetime.fromisoformat(s.split(".")[0])
+
+def month_range(y: int, m: int):
+    first = date(y, m, 1)
+    if m == 12:
+        nxt = date(y + 1, 1, 1)
+    else:
+        nxt = date(y, m + 1, 1)
+    last = nxt - timedelta(days=1)
+    return first, last
+
+def to_local_d(d: datetime) -> date:
+    # 文字化けの主因はフォントだが、日付はUTC起点JSONでもズレないように日付へ変換
+    return (d.astimezone(timezone.utc)).date()
+
+def clamp(v, lo, hi):
+    return max(lo, min(hi, v))
+
+# ====== SVG ビルド ======
+def svg_header(title_text: str) -> str:
+    # CJK を確実に解決できるフォント群を先頭に
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}">
+  <style>
+    @charset "UTF-8";
+    .title {{
+      font-family: "Noto Sans CJK JP","Noto Sans JP","IPAexGothic",
+                   "Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;
+      font-size: 28px; font-weight: 700; fill: #333;
+    }}
+    .weekday, .day-number, .event, .small {{
+      font-family: "Noto Sans CJK JP","Noto Sans JP","IPAexGothic",
+                   "Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;
+      fill: #222;
+    }}
+    .weekday {{ font-size: 16px; font-weight: 600; }}
+    .day-number {{ font-size: 14px; }}
+    .event {{ font-size: 14px; }}
+    .small {{ font-size: 12px; fill: #666; }}
+    .cell {{ fill: #fff; stroke: #ddd; }}
+  </style>
+  <rect x="0" y="0" width="{WIDTH}" height="{HEIGHT}" fill="#fff"/>
+  <text class="title" x="{MARGIN}" y="{MARGIN + 40}">{title_text}</text>
 '''
-        
-        y_offset = self.margin
-        for i, day_name in enumerate(self.week_days):
-            x = self.margin + i * self.cell_width
-            svg_content += f'''
-    <rect x="{x}" y="{y_offset}" width="{self.cell_width}" height="{self.header_height}" 
-          class="cell" fill="#e0e0e0"/>
-    <text x="{x + self.cell_width//2}" y="{y_offset + self.header_height//2 + 5}" 
-          class="header">{day_name}</text>'''
-        
-        for week_idx, week in enumerate(weeks):
-            y = self.margin + self.header_height + week_idx * self.cell_height
-            
-            for day_idx, date in enumerate(week):
-                x = self.margin + day_idx * self.cell_width
-                
-                cell_class = "cell"
-                if date == today_date:
-                    cell_class += " today"
-                elif day_idx == 5:
-                    cell_class += " saturday"
-                elif day_idx == 6:
-                    cell_class += " sunday"
-                
-                month_text = ""
-                if date.day == 1:
-                    month_text = f'<text x="{x + 8}" y="{y + 20}" class="month">{date.month}月</text>'
-                
-                svg_content += f'''
-    <rect x="{x}" y="{y}" width="{self.cell_width}" height="{self.cell_height}" 
-          class="{cell_class}"/>
-    {month_text}
-    <text x="{x + self.cell_width - 8}" y="{y + 20}" 
-          class="day-number">{date.day}</text>'''
-        
-        for week_idx, week in enumerate(weeks):
-            y = self.margin + self.header_height + week_idx * self.cell_height
-            
-            drawn_events = set()
-            
-            for day_idx, date in enumerate(week):
-                x = self.margin + day_idx * self.cell_width
-                
-                if date in date_event_positions:
-                    events_on_date = date_event_positions[date]
-                    for pos, event in enumerate(events_on_date):
-                        if event is not None:
-                            event_id = (event['member'], event['start_date'], event['end_date'])
-                            if event_id not in drawn_events:
-                                if event['start_date'] <= date <= event['end_date']:
-                                    week_start = week[0]
-                                    week_end = week[6]
-                                    event_start_in_week = max(event['start_date'], week_start)
-                                    event_end_in_week = min(event['end_date'], week_end)
-                                    
-                                    if event_start_in_week == date:
-                                        drawn_events.add(event_id)
-                                        
-                                        start_day_idx = event_start_in_week.weekday()
-                                        end_day_idx = event_end_in_week.weekday()
-                                        event_length = end_day_idx - start_day_idx + 1
-                                        
-                                        event_width = event_length * self.cell_width - 4
-                                        event_y = y + 30 + pos * (self.event_height + 2)
-                                        member_color = self.member_colors.get(event['member'], '#f0f0f0')
-                                        
-                                        if event['description'].strip():
-                                            display_text = f"{event['member']}: {event['description'][:15]}"
-                                            if len(event['description']) > 15:
-                                                display_text += "..."
-                                        else:
-                                            display_text = event['member']
 
-                                        text_element = ""
-                                        if display_text:
-                                            text_element = f'<text x="{x + 4}" y="{event_y + 12}" class="event">{display_text}</text>'
-                                        
-                                        svg_content += f'''
-    <rect x="{x + 2}" y="{event_y}" width="{event_width}" height="{self.event_height}" 
-          fill="{member_color}" class="event-rect"/>
-    {text_element}'''
-        
-        svg_content += '''
-</svg>'''
-        
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(svg_content)
-        
-        return output_file
-    
-    def convert_svg_to_png(self, svg_file):
-        png_file = svg_file.replace('.svg', '.png')
-        
+def svg_footer() -> str:
+    return "</svg>\n"
+
+def draw_weekdays():
+    parts = []
+    y = MARGIN + HEADER_H
+    for i, w in enumerate(WEEKDAYS_JP):
+        x = MARGIN + i * CELL_W
+        parts.append(f'<text class="weekday" x="{x + 8}" y="{y + 22}">{w}</text>')
+    return "\n".join(parts)
+
+def month_matrix(y: int, m: int):
+    first, last = month_range(y, m)
+    first_w = first.weekday()  # Mon=0..Sun=6
+    # 日本式（日曜始まり）に合わせる：日=0..土=6
+    # Pythonのweekday: 月0..日6 → 日曜始まりのインデックス
+    def dow_jp(d: date):
+        return (d.weekday() + 1) % 7
+
+    cells = []
+    d = first
+    start_idx = dow_jp(first)
+    # 6行×7列
+    for r in range(6):
+        row = []
+        for c in range(7):
+            idx = r * 7 + c
+            if idx < start_idx or (d > last):
+                row.append(None)
+            else:
+                row.append(d)
+                d = d + timedelta(days=1)
+        cells.append(row)
+    return cells
+
+def day_bg_color(d: date):
+    wd = (d.weekday() + 1) % 7  # 日曜=0
+    if wd == 0:
+        return SUNDAY_BG
+    if wd == 6:
+        return SATURDAY_BG
+    return "#ffffff"
+
+def draw_grid(y: int, m: int, today: date, cells):
+    parts = []
+    top = MARGIN + HEADER_H + WEEKDAY_H
+    for r in range(6):
+        for c in range(7):
+            x = MARGIN + c * CELL_W
+            y0 = top + r * CELL_H
+            d = cells[r][c]
+            fill = "#ffffff"
+            if d:
+                fill = day_bg_color(d)
+                if d == today:
+                    fill = TODAY_BG
+            parts.append(f'<rect class="cell" x="{x}" y="{y0}" width="{CELL_W}" height="{CELL_H}" fill="{fill}" stroke="#ddd"/>')
+            if d:
+                parts.append(f'<text class="day-number" x="{x + CELL_W - 22}" y="{y0 + 18}">{d.day}</text>')
+    return "\n".join(parts)
+
+def load_events(path: str, y: int, m: int):
+    if not os.path.exists(path):
+        return []
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    first, last = month_range(y, m)
+    evs = []
+    for ev in data:
+        # 期待するキー: start, end, name, title
         try:
-            with open(svg_file, "rb") as f_svg:
-                svg_data = f_svg.read()
-                cairosvg.svg2png(bytestring=svg_data, write_to=png_file, dpi=300)
-            print(f"PNG変換成功: {png_file}")
-            return png_file
-            
-        except Exception as e:
-            print(f"CairoSVG PNG変換エラー: {e}")
-            return None
-    
-    def print_date_info(self, today=None):
-        weeks, today_date = self.get_four_week_range(today)
-        print(f"基準日: {today_date}")
-        print(f"4週間の日付範囲:")
-        
-        for week_idx, week in enumerate(weeks):
-            week_type = ["前週", "当週", "次週1", "次週2"][week_idx]
-            print(f"  {week_type}: {week[0]} ～ {week[-1]}")
+            st = parse_iso(ev["start"])
+            en = parse_iso(ev["end"])
+            nm = ev.get("name", "")
+            tt = ev.get("title", "")
+        except Exception:
+            continue
+
+        sd = to_local_d(st)
+        ed = to_local_d(en)
+        # 逆順や同日終了の安全化
+        if ed < sd:
+            sd, ed = ed, sd
+
+        # 月内と交差するものだけ
+        f_d, l_d = first, last
+        if ed < f_d or sd > l_d:
+            continue
+
+        evs.append({
+            "start": max(sd, f_d),
+            "end": min(ed, l_d),
+            "name": nm,
+            "title": tt
+        })
+    return evs
+
+def draw_events(y: int, m: int, cells, events):
+    """
+    各週（行）ごとに、その週に跨るイベントを帯状に描画。
+    同一週内で縦方向にスタックする。
+    """
+    parts = []
+    top = MARGIN + HEADER_H + WEEKDAY_H
+    lane_h = 18  # 1イベント帯の高さ
+    lane_pad = 3
+
+    # 週ごとに帯レーンを管理
+    for r in range(6):
+        # その週の開始・終了日
+        week_days = [cells[r][c] for c in range(7) if cells[r][c] is not None]
+        if not week_days:
+            continue
+        w_start = week_days[0]
+        w_end = week_days[-1]
+
+        # その週に重なるイベント抽出
+        week_evs = []
+        for ev in events:
+            if ev["end"] < w_start or ev["start"] > w_end:
+                continue
+            # 週内の表示区間
+            ds = max(ev["start"], w_start)
+            de = max(ds, min(ev["end"], w_end))
+            week_evs.append({**ev, "ds": ds, "de": de})
+
+        # レーン割り付け（単純貪欲）
+        lanes = []  # 各レーンの末尾終了日
+        placed = []
+        for ev in sorted(week_evs, key=lambda e: (e["ds"], e["de"])):
+            placed_lane = None
+            for li, lend in enumerate(lanes):
+                if ev["ds"] > lend:
+                    placed_lane = li
+                    lanes[li] = ev["de"]
+                    break
+            if placed_lane is None:
+                lanes.append(ev["de"])
+                placed_lane = len(lanes) - 1
+            placed.append((placed_lane, ev))
+
+        # 描画
+        y0 = top + r * CELL_H
+        for idx, (li, ev) in enumerate(placed):
+            color = EVENT_COLORS[(hash(ev["name"]) % len(EVENT_COLORS))]
+            # x座標計算
+            def day_to_x(d: date):
+                c = (d.weekday() + 1) % 7  # 日=0..土=6
+                # 週の最初のセルの列を求める
+                # cells[r][*] の中で day == d の列を見つける
+                for cc in range(7):
+                    if cells[r][cc] == d:
+                        col = cc
+                        break
+                else:
+                    # 同週内に確実に居るはずだが、念のため推測（列）
+                    col = (d.weekday() + 1) % 7
+                return MARGIN + col * CELL_W
+
+            x_s = day_to_x(ev["ds"])
+            x_e = day_to_x(ev["de"]) + CELL_W
+            band_y = y0 + 22 + li * (lane_h + lane_pad)
+            h = lane_h
+            w = clamp(x_e - x_s - 3, 10, WIDTH)  # 右罫線に被らないよう微調整
+            parts.append(f'<rect x="{x_s + 2}" y="{band_y}" width="{w}" height="{h}" fill="{color}" stroke="#b0b0b0"/>')
+            label = f'{ev["name"]}: {ev["title"]}'.strip(": ")
+            parts.append(f'<text class="event" x="{x_s + 6}" y="{band_y + h - 4}">{escape_xml(label)}</text>')
+    return "\n".join(parts)
+
+def escape_xml(s: str) -> str:
+    return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 def main():
-    """メイン関数"""
-    
-    generator = CalendarSVGGenerator()
-    
-    # JSONファイルから予定を読み込む
-    generator.load_events_from_json("vacation_data.json")
-    
-    if not generator.events:
-        print("予定データが読み込まれませんでした。処理を終了します。")
-        return
+    # 対象年月（環境変数で上書き可）
+    today = date.today()
+    y = int(os.environ.get("TARGET_YEAR", today.year))
+    m = int(os.environ.get("TARGET_MONTH", today.month))
 
-    # SVGを生成
-    svg_output_file = generator.generate_svg(output_file="calendar.svg")
-    print(f"カレンダーSVGを生成しました: {svg_output_file}")
-    
-    # PNGに変換
-    png_output_file = generator.convert_svg_to_png(svg_output_file)
-    
-    if png_output_file:
-        print(f"PNGファイルが生成されました: {png_output_file}")
-    
-    # デバッグ情報を表示
-    generator.print_date_info()
-    
-    print(f"\n読み込んだ予定数: {len(generator.events)}")
-    print(f"メンバー数: {len(generator.member_colors)}")
-    for member, color in generator.member_colors.items():
-        print(f"  {member}: {color}")
+    first, last = month_range(y, m)
+    title_text = f"{y}年 {m}月"
+
+    cells = month_matrix(y, m)
+    events = load_events(DATA_JSON, y, m)
+
+    # SVG 組み立て
+    parts = [svg_header(title_text)]
+    parts.append(draw_weekdays())
+    parts.append(draw_grid(y, m, today, cells))
+    parts.append(draw_events(y, m, cells, events))
+    parts.append(svg_footer())
+    svg = "\n".join(parts)
+
+    with open(OUTPUT_SVG, "w", encoding="utf-8") as f:
+        f.write(svg)
+
+    # PNG 変換（CairoSVG）
+    try:
+        import cairosvg
+        cairosvg.svg2png(url=OUTPUT_SVG, write_to=OUTPUT_PNG, output_width=WIDTH, output_height=HEIGHT, dpi=192)
+        print(f"Generated: {OUTPUT_SVG}, {OUTPUT_PNG}")
+    except Exception as e:
+        # 失敗してもワークフローを壊さない
+        print("PNG rendering failed:", e)
+        print(f"SVG only: {OUTPUT_SVG}")
 
 if __name__ == "__main__":
     main()

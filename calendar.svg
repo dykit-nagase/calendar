@@ -44,9 +44,9 @@
 <text class="day-number" x="163.71428571428572" y="283.0">7</text>
 <rect class="cell" x="185.71428571428572" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="283.0">8</text>
-<rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
+<rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="283.0">9</text>
-<rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="283.0">10</text>
 <rect class="cell" x="682.8571428571429" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="283.0">11</text>
@@ -86,6 +86,8 @@
 <text class="event" x="191.71428571428572" y="301.0">田中風舞: インターン</text>
 <rect x="187.71428571428572" y="308.0" width="825.5714285714287" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
 <text class="event" x="191.71428571428572" y="322.0">野田武志: 忙しい</text>
+<rect x="684.8571428571429" y="329.0" width="328.42857142857156" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="688.8571428571429" y="343.0">小林愛実: 隠岐旅行</text>
 <rect x="22.0" y="432.0" width="162.71428571428572" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="446.0">伊藤大輝: 記録会</text>
 <rect x="187.71428571428572" y="432.0" width="825.5714285714287" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>

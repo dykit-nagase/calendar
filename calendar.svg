@@ -46,9 +46,9 @@
 <text class="day-number" x="329.42857142857144" y="283.0">8</text>
 <rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="283.0">9</text>
-<rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
+<rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="283.0">10</text>
-<rect class="cell" x="682.8571428571429" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<rect class="cell" x="682.8571428571429" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="283.0">11</text>
 <rect class="cell" x="848.5714285714287" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="283.0">12</text>
@@ -88,16 +88,24 @@
 <text class="event" x="191.71428571428572" y="322.0">野田武志: 忙しい</text>
 <rect x="684.8571428571429" y="329.0" width="328.42857142857156" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
 <text class="event" x="688.8571428571429" y="343.0">小林愛実: 隠岐旅行</text>
+<rect x="850.5714285714287" y="287.0" width="328.42857142857133" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="854.5714285714287" y="301.0">山中駿: 資格試験</text>
 <rect x="22.0" y="432.0" width="162.71428571428572" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="446.0">伊藤大輝: 記録会</text>
+<rect x="22.0" y="453.0" width="162.71428571428572" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="467.0">山中駿: 資格試験</text>
+<rect x="22.0" y="474.0" width="328.42857142857144" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="488.0">五十嵐遥斗: 万博</text>
 <rect x="187.71428571428572" y="432.0" width="825.5714285714287" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
 <text class="event" x="191.71428571428572" y="446.0">野田武志: 外病院実習</text>
-<rect x="353.42857142857144" y="453.0" width="825.5714285714286" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
-<text class="event" x="357.42857142857144" y="467.0">音羽拓: 海外</text>
-<rect x="684.8571428571429" y="474.0" width="162.71428571428578" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
-<text class="event" x="688.8571428571429" y="488.0">伊田彩桜: YOASOBIのライブ</text>
-<rect x="850.5714285714287" y="474.0" width="328.42857142857133" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
-<text class="event" x="854.5714285714287" y="488.0">野田武志: 忙しい</text>
+<rect x="353.42857142857144" y="453.0" width="494.1428571428572" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="467.0">山中駿: 日本国際博覧会</text>
+<rect x="353.42857142857144" y="474.0" width="825.5714285714286" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="488.0">音羽拓: 海外</text>
+<rect x="684.8571428571429" y="495.0" width="162.71428571428578" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
+<text class="event" x="688.8571428571429" y="509.0">伊田彩桜: YOASOBIのライブ</text>
+<rect x="850.5714285714287" y="453.0" width="328.42857142857133" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="854.5714285714287" y="467.0">野田武志: 忙しい</text>
 <rect x="1016.2857142857143" y="432.0" width="162.71428571428567" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="1020.2857142857143" y="446.0">上田琉颯: 家族旅行</text>
 <rect x="22.0" y="577.0" width="162.71428571428572" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>

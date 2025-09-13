@@ -50,9 +50,9 @@
 <text class="day-number" x="660.8571428571429" y="283.0">10</text>
 <rect class="cell" x="682.8571428571429" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="283.0">11</text>
-<rect class="cell" x="848.5714285714287" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
+<rect class="cell" x="848.5714285714287" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="283.0">12</text>
-<rect class="cell" x="1014.2857142857143" y="265.0" width="165.71428571428572" height="145.0" fill="#e5f1ff" stroke="#ddd"/>
+<rect class="cell" x="1014.2857142857143" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="283.0">13</text>
 <rect class="cell" x="20.0" y="410.0" width="165.71428571428572" height="145.0" fill="#fde2e2" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="428.0">14</text>

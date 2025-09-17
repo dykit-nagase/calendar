@@ -44,9 +44,9 @@
 <text class="day-number" x="163.71428571428572" y="283.0">14</text>
 <rect class="cell" x="185.71428571428572" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="283.0">15</text>
-<rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
+<rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="283.0">16</text>
-<rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="283.0">17</text>
 <rect class="cell" x="682.8571428571429" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="283.0">18</text>
@@ -110,18 +110,24 @@
 <text class="event" x="1020.2857142857143" y="301.0">上田琉颯: 家族旅行</text>
 <rect x="1016.2857142857143" y="350.0" width="162.71428571428567" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
 <text class="event" x="1020.2857142857143" y="364.0">伊藤大輝: 熱海旅行</text>
+<rect x="1016.2857142857143" y="371.0" width="162.71428571428567" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="1020.2857142857143" y="385.0">新康太朗: リーグ</text>
 <rect x="22.0" y="432.0" width="162.71428571428572" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="446.0">野田武志: 忙しい</text>
-<rect x="22.0" y="453.0" width="494.1428571428571" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="467.0">上田琉颯: 家族旅行</text>
-<rect x="22.0" y="474.0" width="494.1428571428571" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="488.0">伊藤大輝: 熱海旅行</text>
-<rect x="22.0" y="495.0" width="991.2857142857144" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="509.0">音羽拓: 海外</text>
-<rect x="187.71428571428572" y="432.0" width="825.5714285714287" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
-<text class="event" x="191.71428571428572" y="446.0">野田武志: 外病院実習</text>
-<rect x="850.5714285714287" y="453.0" width="328.42857142857133" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
-<text class="event" x="854.5714285714287" y="467.0">野田武志: 韓国</text>
+<rect x="22.0" y="453.0" width="162.71428571428572" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="467.0">新康太朗: リーグ</text>
+<rect x="22.0" y="474.0" width="494.1428571428571" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="488.0">上田琉颯: 家族旅行</text>
+<rect x="22.0" y="495.0" width="494.1428571428571" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="509.0">伊藤大輝: 熱海旅行</text>
+<rect x="22.0" y="516.0" width="991.2857142857144" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="530.0">音羽拓: 海外</text>
+<rect x="187.71428571428572" y="432.0" width="328.4285714285714" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="446.0">山下颯太: 私用</text>
+<rect x="187.71428571428572" y="453.0" width="825.5714285714287" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="467.0">野田武志: 外病院実習</text>
+<rect x="850.5714285714287" y="432.0" width="328.42857142857133" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="854.5714285714287" y="446.0">野田武志: 韓国</text>
 <rect x="22.0" y="577.0" width="162.71428571428572" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="591.0">野田武志: 韓国</text>
 <rect x="187.71428571428572" y="577.0" width="328.4285714285714" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>

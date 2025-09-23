@@ -42,9 +42,9 @@
 <text class="day-number" x="1158.0" y="138.0">20</text>
 <rect class="cell" x="20.0" y="265.0" width="165.71428571428572" height="145.0" fill="#fde2e2" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="283.0">21</text>
-<rect class="cell" x="185.71428571428572" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
+<rect class="cell" x="185.71428571428572" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="283.0">22</text>
-<rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="283.0">23</text>
 <rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="283.0">24</text>
@@ -134,6 +134,8 @@
 <text class="event" x="357.42857142857144" y="448.0">中村春貴: 旅行</text>
 <rect x="519.1428571428571" y="287.0" width="162.71428571428578" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
 <text class="event" x="523.1428571428571" y="301.0">都留 健太郎: セメント工場見学</text>
+<rect x="519.1428571428571" y="350.0" width="162.71428571428578" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="523.1428571428571" y="364.0">田中風舞: 🐭</text>
 <rect x="850.5714285714287" y="287.0" width="328.42857142857133" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
 <text class="event" x="854.5714285714287" y="301.0">野田武志: 韓国</text>
 <rect x="1016.2857142857143" y="308.0" width="162.71428571428567" height="18" fill="#f9e79f" stroke="#b0b0b0"/>

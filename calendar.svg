@@ -44,9 +44,9 @@
 <text class="day-number" x="163.71428571428572" y="283.0">21</text>
 <rect class="cell" x="185.71428571428572" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="283.0">22</text>
-<rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
+<rect class="cell" x="351.42857142857144" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="283.0">23</text>
-<rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
+<rect class="cell" x="517.1428571428571" y="265.0" width="165.71428571428572" height="145.0" fill="#fff8b3" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="283.0">24</text>
 <rect class="cell" x="682.8571428571429" y="265.0" width="165.71428571428572" height="145.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="283.0">25</text>
@@ -136,14 +136,18 @@
 <text class="event" x="523.1428571428571" y="301.0">都留 健太郎: セメント工場見学</text>
 <rect x="519.1428571428571" y="350.0" width="162.71428571428578" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="523.1428571428571" y="364.0">田中風舞: 🐭</text>
-<rect x="850.5714285714287" y="287.0" width="328.42857142857133" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
-<text class="event" x="854.5714285714287" y="301.0">野田武志: 韓国</text>
+<rect x="684.8571428571429" y="287.0" width="494.1428571428571" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
+<text class="event" x="688.8571428571429" y="301.0">小嶋友登: 旅行</text>
+<rect x="850.5714285714287" y="329.0" width="328.42857142857133" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="854.5714285714287" y="343.0">野田武志: 韓国</text>
 <rect x="1016.2857142857143" y="308.0" width="162.71428571428567" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="1020.2857142857143" y="322.0">松本颯太: 追いコン</text>
 <rect x="22.0" y="432.0" width="162.71428571428572" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="446.0">野田武志: 韓国</text>
 <rect x="22.0" y="453.0" width="162.71428571428572" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="467.0">松本颯太: 追いコン</text>
+<rect x="22.0" y="474.0" width="162.71428571428572" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="488.0">小嶋友登: 旅行</text>
 <rect x="187.71428571428572" y="432.0" width="328.4285714285714" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
 <text class="event" x="191.71428571428572" y="446.0">音羽拓: 旅行</text>
 <rect x="684.8571428571429" y="432.0" width="162.71428571428578" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>

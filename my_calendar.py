@@ -150,7 +150,7 @@ def draw_grid(matrix, today: date):
             fill = day_bg_color(d)
             if d == today:
                 fill = TODAY_BG
-            parts.append(f'<rect class="cell" x="{x}" y="{y0}" width="{CELL_W}" height="{CELL_H}" fill="{fill}" stroke="#ddd"/>')
+            parts.append(f'<rect x="{x}" y="{y0}" width="{CELL_W}" height="{CELL_H}" fill="{fill}" stroke="#ddd"/>')
             parts.append(f'<text class="day-number" x="{x + CELL_W - 22}" y="{y0 + 18}">{d.day}</text>')
     return "\n".join(parts)
 

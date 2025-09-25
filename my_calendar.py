@@ -26,12 +26,13 @@ CELL_H = (HEIGHT - MARGIN * 2 - HEADER_H - WEEKDAY_H) / ROWS
 
 WEEKDAYS_JP = ["日", "月", "火", "水", "木", "金", "土"]
 
-SUNDAY_BG = "#fde2e2"
-SATURDAY_BG = "#e5f1ff"
-TODAY_BG = "#fff8b3"
+SUNDAY_BG = "#fff7f9"
+SATURDAY_BG = "#f7f7ff"
+TODAY_BG = "#d9ffeb"
 
 EVENT_COLORS = [
     "#cfe8ff", "#ffc7ce", "#d5f5e3", "#f9e79f", "#f5cba7",
+    "#e8daef", "#d6eaf8", "#fdebd0", "#f6ddcc", "#d1f2eb", "#fef9e7",
 ]
 
 _name_color_cache = {}

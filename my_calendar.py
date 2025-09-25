@@ -28,7 +28,7 @@ WEEKDAYS_JP = ["日", "月", "火", "水", "木", "金", "土"]
 
 SUNDAY_BG = "#fff7f9"
 SATURDAY_BG = "#f7f7ff"
-TODAY_BG = "#d9ffeb"
+TODAY_BG = "#fbff00"
 
 EVENT_COLORS = [
     "#cfe8ff", "#ffc7ce", "#d5f5e3", "#f9e79f", "#f5cba7",

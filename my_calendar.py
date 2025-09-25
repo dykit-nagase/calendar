@@ -14,7 +14,7 @@ DATA_JSON = "vacation_data.json"  # GAS で保存した JSON（start/end/name/ti
 
 # ====== 表示設定 ======
 WIDTH = 1200
-HEIGHT = 720
+HEIGHT = 1800
 MARGIN = 20
 HEADER_H = 70
 WEEKDAY_H = 30

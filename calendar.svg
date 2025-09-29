@@ -40,9 +40,9 @@
 <text class="day-number" x="992.2857142857144" y="138.0">26</text>
 <rect x="1014.2857142857143" y="120.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="138.0">27</text>
-<rect x="20.0" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="20.0" y="385.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="403.0">28</text>
-<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
+<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="403.0">29</text>
 <rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="403.0">30</text>
@@ -132,10 +132,14 @@
 <text class="event" x="688.8571428571429" y="442.0">五十嵐遥斗: 病院見学など</text>
 <rect x="22.0" y="672.0" width="1157.0" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="686.0">河崎将英: 卒業旅行(🇮🇩)</text>
-<rect x="1016.2857142857143" y="693.0" width="162.71428571428567" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
-<text class="event" x="1020.2857142857143" y="707.0">山下颯太: きゃんちゅーなど</text>
+<rect x="850.5714285714287" y="693.0" width="328.42857142857133" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="854.5714285714287" y="707.0">伊田彩桜: 学会・家族サービス</text>
+<rect x="1016.2857142857143" y="714.0" width="162.71428571428567" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="1020.2857142857143" y="728.0">山下颯太: きゃんちゅーなど</text>
 <rect x="22.0" y="937.0" width="328.42857142857144" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="951.0">河崎将英: 卒業旅行(🇮🇩)</text>
 <rect x="22.0" y="958.0" width="328.42857142857144" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="972.0">山下颯太: きゃんちゅーなど</text>
+<rect x="22.0" y="979.0" width="328.42857142857144" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="993.0">伊田彩桜: 学会・家族サービス</text>
 </svg>

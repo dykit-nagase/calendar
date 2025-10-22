@@ -44,9 +44,9 @@
 <text class="day-number" x="163.71428571428572" y="403.0">19</text>
 <rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="403.0">20</text>
-<rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="403.0">21</text>
-<rect x="517.1428571428571" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
+<rect x="517.1428571428571" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="403.0">22</text>
 <rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">23</text>
@@ -116,12 +116,16 @@
 <text class="event" x="357.42857142857144" y="421.0">栗原豊季: トライアスロン大会運営</text>
 <rect x="684.8571428571429" y="428.0" width="162.71428571428578" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="688.8571428571429" y="442.0">五十嵐遥斗: 病院見学</text>
+<rect x="684.8571428571429" y="449.0" width="328.42857142857156" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
+<text class="event" x="688.8571428571429" y="463.0">細井亮太: 学会</text>
 <rect x="850.5714285714287" y="428.0" width="328.42857142857133" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="854.5714285714287" y="442.0">五十嵐遥斗: シンガポール旅行</text>
+<rect x="850.5714285714287" y="470.0" width="328.42857142857133" height="18" fill="#e8daef" stroke="#b0b0b0"/>
+<text class="event" x="854.5714285714287" y="484.0">亀田龍亮: 全て飲み会</text>
 <rect x="1016.2857142857143" y="449.0" width="162.71428571428567" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
 <text class="event" x="1020.2857142857143" y="463.0">野田武志: 米子</text>
-<rect x="1016.2857142857143" y="470.0" width="162.71428571428567" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
-<text class="event" x="1020.2857142857143" y="484.0">田中ふうま: 米子会</text>
+<rect x="1016.2857142857143" y="491.0" width="162.71428571428567" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
+<text class="event" x="1020.2857142857143" y="505.0">田中ふうま: 米子会</text>
 <rect x="22.0" y="672.0" width="162.71428571428572" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="686.0">野田武志: 米子</text>
 <rect x="22.0" y="693.0" width="162.71428571428572" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
@@ -130,14 +134,22 @@
 <text class="event" x="26.0" y="728.0">栗原豊季: トライアスロン大会運営</text>
 <rect x="22.0" y="735.0" width="162.71428571428572" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="749.0">五十嵐遥斗: シンガポール旅行</text>
+<rect x="22.0" y="756.0" width="162.71428571428572" height="18" fill="#e8daef" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="770.0">亀田龍亮: 全て飲み会</text>
 <rect x="187.71428571428572" y="672.0" width="991.2857142857142" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
 <text class="event" x="191.71428571428572" y="686.0">松本悠汰: 部活動の大会</text>
-<rect x="684.8571428571429" y="693.0" width="494.1428571428571" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
-<text class="event" x="688.8571428571429" y="707.0">福田敦也: 学祭の準備等で</text>
-<rect x="684.8571428571429" y="714.0" width="494.1428571428571" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
-<text class="event" x="688.8571428571429" y="728.0">野田武志: 瀬戸芸</text>
+<rect x="353.42857142857144" y="693.0" width="162.71428571428567" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="707.0">音羽拓: 甲子園</text>
+<rect x="519.1428571428571" y="693.0" width="659.8571428571429" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
+<text class="event" x="523.1428571428571" y="707.0">豊田剛史: 旅行</text>
+<rect x="684.8571428571429" y="714.0" width="494.1428571428571" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="688.8571428571429" y="728.0">福田敦也: 学祭の準備等で</text>
+<rect x="684.8571428571429" y="735.0" width="494.1428571428571" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
+<text class="event" x="688.8571428571429" y="749.0">野田武志: 瀬戸芸</text>
 <rect x="22.0" y="937.0" width="328.42857142857144" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="951.0">福田敦也: 学祭の準備等で</text>
 <rect x="22.0" y="958.0" width="328.42857142857144" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="972.0">松本悠汰: 部活動の大会</text>
+<rect x="684.8571428571429" y="937.0" width="328.42857142857156" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="688.8571428571429" y="951.0">音羽 拓: 旅行</text>
 </svg>

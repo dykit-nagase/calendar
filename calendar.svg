@@ -50,9 +50,9 @@
 <text class="day-number" x="660.8571428571429" y="403.0">22</text>
 <rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">23</text>
-<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="403.0">24</text>
-<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
+<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="403.0">25</text>
 <rect x="20.0" y="650.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="668.0">26</text>
@@ -136,6 +136,8 @@
 <text class="event" x="26.0" y="749.0">五十嵐遥斗: シンガポール旅行</text>
 <rect x="22.0" y="756.0" width="162.71428571428572" height="18" fill="#e8daef" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="770.0">亀田龍亮: 全て飲み会</text>
+<rect x="22.0" y="777.0" width="162.71428571428572" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="791.0">福田敦也: 私用</text>
 <rect x="187.71428571428572" y="672.0" width="991.2857142857142" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
 <text class="event" x="191.71428571428572" y="686.0">松本悠汰: 部活動の大会</text>
 <rect x="353.42857142857144" y="693.0" width="162.71428571428567" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>

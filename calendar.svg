@@ -50,9 +50,9 @@
 <text class="day-number" x="660.8571428571429" y="403.0">29</text>
 <rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">30</text>
-<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="403.0">31</text>
-<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
+<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="403.0">1</text>
 <rect x="20.0" y="650.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="668.0">2</text>
@@ -142,6 +142,10 @@
 <text class="event" x="26.0" y="728.0">松本悠汰: 部活動の大会</text>
 <rect x="22.0" y="735.0" width="328.42857142857144" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="749.0">芳賀冬渚: アイドル</text>
+<rect x="22.0" y="756.0" width="328.42857142857144" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="770.0">新康太朗: 大会、発熱</text>
+<rect x="22.0" y="777.0" width="494.1428571428571" height="18" fill="#fef9e7" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="791.0">亀田 龍亮: 旅行にいってきます</text>
 <rect x="684.8571428571429" y="672.0" width="328.42857142857156" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="688.8571428571429" y="686.0">音羽 拓: 旅行</text>
 <rect x="1016.2857142857143" y="672.0" width="162.71428571428567" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>

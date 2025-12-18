@@ -5,6 +5,8 @@ import json
 import os
 from datetime import date, datetime, timedelta, timezone
 import hashlib
+from zoneinfo import ZoneInfo
+
 
 
 # ====== 出力ファイル ======
@@ -217,7 +219,7 @@ def draw_events(matrix, events):
     return "\n".join(parts)
 
 def main():
-    today = date.today()
+    today = datetime.now(ZoneInfo("Asia/Tokyo")).date()
 
     # 実行日の属する週の先頭（日曜）を求め、前1週間から開始
     this_week_start = start_of_week_sunday(today)

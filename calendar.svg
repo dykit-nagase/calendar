@@ -40,9 +40,9 @@
 <text class="day-number" x="992.2857142857144" y="138.0">9</text>
 <rect x="1014.2857142857143" y="120.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="138.0">10</text>
-<rect x="20.0" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="20.0" y="385.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="403.0">11</text>
-<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
+<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="403.0">12</text>
 <rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="403.0">13</text>
@@ -98,6 +98,8 @@
 <text class="event" x="26.0" y="421.0">伊田彩桜: 卒業試験勉強</text>
 <rect x="22.0" y="428.0" width="1157.0" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="442.0">豊田剛史: 国試勉強</text>
+<rect x="187.71428571428572" y="449.0" width="825.5714285714287" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="463.0">瀧浦晴人: インフル</text>
 <rect x="22.0" y="672.0" width="1157.0" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="686.0">豊田剛史: 国試勉強</text>
 <rect x="22.0" y="937.0" width="1157.0" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>

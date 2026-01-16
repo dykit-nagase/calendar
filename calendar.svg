@@ -50,9 +50,9 @@
 <text class="day-number" x="660.8571428571429" y="403.0">14</text>
 <rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">15</text>
-<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="403.0">16</text>
-<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
+<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="403.0">17</text>
 <rect x="20.0" y="650.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="668.0">18</text>
@@ -100,10 +100,14 @@
 <text class="event" x="26.0" y="442.0">豊田剛史: 国試勉強</text>
 <rect x="187.71428571428572" y="449.0" width="825.5714285714287" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
 <text class="event" x="191.71428571428572" y="463.0">瀧浦晴人: インフル</text>
-<rect x="22.0" y="672.0" width="1157.0" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="686.0">豊田剛史: 国試勉強</text>
-<rect x="187.71428571428572" y="693.0" width="659.8571428571429" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
-<text class="event" x="191.71428571428572" y="707.0">伊田彩桜: 旅行</text>
+<rect x="1016.2857142857143" y="407.0" width="162.71428571428567" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="1020.2857142857143" y="421.0">爲佐信彦: 京都</text>
+<rect x="22.0" y="672.0" width="162.71428571428572" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="686.0">爲佐信彦: 京都</text>
+<rect x="22.0" y="693.0" width="1157.0" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="707.0">豊田剛史: 国試勉強</text>
+<rect x="187.71428571428572" y="672.0" width="659.8571428571429" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="686.0">伊田彩桜: 旅行</text>
 <rect x="684.8571428571429" y="714.0" width="494.1428571428571" height="18" fill="#d6eaf8" stroke="#b0b0b0"/>
 <text class="event" x="688.8571428571429" y="728.0">田中風舞: 試験勉強</text>
 <rect x="22.0" y="937.0" width="1157.0" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>

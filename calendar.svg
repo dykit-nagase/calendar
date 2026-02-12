@@ -48,9 +48,9 @@
 <text class="day-number" x="495.1428571428571" y="403.0">10</text>
 <rect x="517.1428571428571" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="403.0">11</text>
-<rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">12</text>
-<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
+<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="403.0">13</text>
 <rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="403.0">14</text>
@@ -158,14 +158,16 @@
 <text class="event" x="26.0" y="728.0">大野正道: 模試運営ラッシュ</text>
 <rect x="22.0" y="735.0" width="1157.0" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="749.0">河崎将英: 南米旅行</text>
-<rect x="187.71428571428572" y="672.0" width="991.2857142857142" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
-<text class="event" x="191.71428571428572" y="686.0">伊藤大輝: 全国学生選抜合宿</text>
-<rect x="353.42857142857144" y="693.0" width="494.1428571428572" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
-<text class="event" x="357.42857142857144" y="707.0">上田琉颯: ライブ+旅行</text>
-<rect x="519.1428571428571" y="756.0" width="162.71428571428578" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
-<text class="event" x="523.1428571428571" y="770.0">野田武志: 私用</text>
-<rect x="1016.2857142857143" y="693.0" width="162.71428571428567" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
-<text class="event" x="1020.2857142857143" y="707.0">野田武志: 私用</text>
+<rect x="187.71428571428572" y="672.0" width="494.14285714285717" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="686.0">新康太朗: スプクラ</text>
+<rect x="187.71428571428572" y="693.0" width="991.2857142857142" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="707.0">伊藤大輝: 全国学生選抜合宿</text>
+<rect x="353.42857142857144" y="756.0" width="494.1428571428572" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="770.0">上田琉颯: ライブ+旅行</text>
+<rect x="519.1428571428571" y="777.0" width="162.71428571428578" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
+<text class="event" x="523.1428571428571" y="791.0">野田武志: 私用</text>
+<rect x="1016.2857142857143" y="672.0" width="162.71428571428567" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
+<text class="event" x="1020.2857142857143" y="686.0">野田武志: 私用</text>
 <rect x="1016.2857142857143" y="714.0" width="162.71428571428567" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
 <text class="event" x="1020.2857142857143" y="728.0">福田敦也: 私用</text>
 <rect x="22.0" y="937.0" width="162.71428571428572" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>

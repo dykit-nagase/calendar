@@ -50,9 +50,9 @@
 <text class="day-number" x="660.8571428571429" y="403.0">25</text>
 <rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">26</text>
-<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="403.0">27</text>
-<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
+<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="403.0">28</text>
 <rect x="20.0" y="650.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="668.0">1</text>
@@ -126,16 +126,30 @@
 <text class="event" x="523.1428571428571" y="505.0">河崎将英: 沖縄</text>
 <rect x="850.5714285714287" y="407.0" width="328.42857142857133" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
 <text class="event" x="854.5714285714287" y="421.0">爲佐信彦: 諸用</text>
+<rect x="1016.2857142857143" y="449.0" width="162.71428571428567" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="1020.2857142857143" y="463.0">小嶋友登: 旅行</text>
 <rect x="22.0" y="672.0" width="162.71428571428572" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="686.0">爲佐信彦: 諸用</text>
-<rect x="22.0" y="693.0" width="328.42857142857144" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="707.0">小林愛実: 私用</text>
-<rect x="22.0" y="714.0" width="494.1428571428571" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="728.0">河崎将英: 沖縄</text>
+<rect x="22.0" y="693.0" width="162.71428571428572" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="707.0">小嶋友登: 旅行</text>
+<rect x="22.0" y="714.0" width="328.42857142857144" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="728.0">小林愛実: 私用</text>
+<rect x="22.0" y="735.0" width="494.1428571428571" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="749.0">河崎将英: 沖縄</text>
 <rect x="187.71428571428572" y="672.0" width="328.4285714285714" height="18" fill="#fef9e7" stroke="#b0b0b0"/>
 <text class="event" x="191.71428571428572" y="686.0">亀田 龍亮: 私用</text>
-<rect x="353.42857142857144" y="693.0" width="825.5714285714286" height="18" fill="#fef9e7" stroke="#b0b0b0"/>
-<text class="event" x="357.42857142857144" y="707.0">三池茉佳奈: ハワイ</text>
+<rect x="187.71428571428572" y="693.0" width="991.2857142857142" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="707.0">滝田紘之: 海外現地調査</text>
+<rect x="353.42857142857144" y="714.0" width="825.5714285714286" height="18" fill="#fef9e7" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="728.0">三池茉佳奈: ハワイ</text>
 <rect x="22.0" y="937.0" width="328.42857142857144" height="18" fill="#fef9e7" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="951.0">亀田 龍亮: 私用</text>
+<rect x="22.0" y="958.0" width="494.1428571428571" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="972.0">小嶋友登: 旅行</text>
+<rect x="22.0" y="979.0" width="991.2857142857144" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="993.0">滝田紘之: 海外現地調査</text>
+<rect x="519.1428571428571" y="937.0" width="162.71428571428578" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="523.1428571428571" y="951.0">福田敦也: 私用</text>
+<rect x="850.5714285714287" y="937.0" width="328.42857142857133" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>
+<text class="event" x="854.5714285714287" y="951.0">小嶋友登: サークルの合宿</text>
 </svg>

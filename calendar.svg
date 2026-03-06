@@ -50,9 +50,9 @@
 <text class="day-number" x="660.8571428571429" y="403.0">4</text>
 <rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">5</text>
-<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="403.0">6</text>
-<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
+<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="403.0">7</text>
 <rect x="20.0" y="650.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="668.0">8</text>
@@ -128,6 +128,8 @@
 <text class="event" x="854.5714285714287" y="463.0">田中風舞: 私用</text>
 <rect x="850.5714285714287" y="491.0" width="162.71428571428578" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="854.5714285714287" y="505.0">兼光結実子: 研究発表</text>
+<rect x="1016.2857142857143" y="407.0" width="162.71428571428567" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
+<text class="event" x="1020.2857142857143" y="421.0">野田武志: 私用</text>
 <rect x="22.0" y="672.0" width="328.42857142857144" height="18" fill="#fef9e7" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="686.0">亀田 龍亮: 私用</text>
 <rect x="22.0" y="693.0" width="494.1428571428571" height="18" fill="#ffc7ce" stroke="#b0b0b0"/>

@@ -50,9 +50,9 @@
 <text class="day-number" x="660.8571428571429" y="403.0">29</text>
 <rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">30</text>
-<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="403.0">1</text>
-<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
+<rect x="1014.2857142857143" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="403.0">2</text>
 <rect x="20.0" y="650.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="668.0">3</text>
@@ -104,6 +104,8 @@
 <text class="event" x="26.0" y="686.0">伊藤大輝: GW強化練習(部活)</text>
 <rect x="187.71428571428572" y="693.0" width="991.2857142857142" height="18" fill="#d6eaf8" stroke="#b0b0b0"/>
 <text class="event" x="191.71428571428572" y="707.0">田中風舞: 対校戦の準備と対校戦</text>
+<rect x="519.1428571428571" y="714.0" width="328.42857142857156" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="523.1428571428571" y="728.0">福田敦也: 旅行</text>
 <rect x="22.0" y="937.0" width="162.71428571428572" height="18" fill="#d6eaf8" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="951.0">田中風舞: 対校戦の準備と対校戦</text>
 </svg>

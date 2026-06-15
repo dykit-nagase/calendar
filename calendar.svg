@@ -42,9 +42,9 @@
 <text class="day-number" x="1158.0" y="138.0">13</text>
 <rect x="20.0" y="385.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="403.0">14</text>
-<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="403.0">15</text>
-<rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
+<rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="403.0">16</text>
 <rect x="517.1428571428571" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="403.0">17</text>

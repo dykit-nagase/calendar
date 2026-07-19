@@ -40,9 +40,9 @@
 <text class="day-number" x="992.2857142857144" y="138.0">17</text>
 <rect x="1014.2857142857143" y="120.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="138.0">18</text>
-<rect x="20.0" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="20.0" y="385.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="403.0">19</text>
-<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
+<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="403.0">20</text>
 <rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="403.0">21</text>
@@ -104,10 +104,16 @@
 <text class="event" x="26.0" y="463.0">田中風舞: 試験勉強</text>
 <rect x="22.0" y="470.0" width="1157.0" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="484.0">山下颯太: 院試勉強</text>
-<rect x="684.8571428571429" y="407.0" width="494.1428571428571" height="18" fill="#fef9e7" stroke="#b0b0b0"/>
-<text class="event" x="688.8571428571429" y="421.0">土田裕嵩: 大会</text>
+<rect x="187.71428571428572" y="491.0" width="991.2857142857142" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="505.0">新康太朗: 試験勉強</text>
+<rect x="353.42857142857144" y="407.0" width="659.857142857143" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="421.0">爲佐信彦: だいじなしけん</text>
+<rect x="684.8571428571429" y="512.0" width="494.1428571428571" height="18" fill="#fef9e7" stroke="#b0b0b0"/>
+<text class="event" x="688.8571428571429" y="526.0">土田裕嵩: 大会</text>
+<rect x="1016.2857142857143" y="407.0" width="162.71428571428567" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
+<text class="event" x="1020.2857142857143" y="421.0">大鶴康祐: 国際学会参加</text>
 <rect x="1016.2857142857143" y="428.0" width="162.71428571428567" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
-<text class="event" x="1020.2857142857143" y="442.0">大鶴康祐: 国際学会参加</text>
+<text class="event" x="1020.2857142857143" y="442.0">須藤諒也: 院試勉強のため</text>
 <rect x="22.0" y="672.0" width="328.42857142857144" height="18" fill="#d6eaf8" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="686.0">田中風舞: 試験勉強</text>
 <rect x="22.0" y="693.0" width="659.8571428571429" height="18" fill="#fef9e7" stroke="#b0b0b0"/>
@@ -116,14 +122,20 @@
 <text class="event" x="26.0" y="728.0">山下颯太: 院試勉強</text>
 <rect x="22.0" y="735.0" width="1157.0" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="749.0">大鶴康祐: 国際学会参加</text>
-<rect x="187.71428571428572" y="756.0" width="659.8571428571429" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
-<text class="event" x="191.71428571428572" y="770.0">兼光結実子: 🇰🇷</text>
-<rect x="187.71428571428572" y="777.0" width="991.2857142857142" height="18" fill="#e8daef" stroke="#b0b0b0"/>
-<text class="event" x="191.71428571428572" y="791.0">郷田真佑: インターン</text>
+<rect x="22.0" y="756.0" width="1157.0" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="770.0">須藤諒也: 院試勉強のため</text>
+<rect x="22.0" y="777.0" width="1157.0" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="791.0">新康太朗: 試験勉強</text>
+<rect x="187.71428571428572" y="798.0" width="659.8571428571429" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="812.0">兼光結実子: 🇰🇷</text>
+<rect x="187.71428571428572" y="819.0" width="991.2857142857142" height="18" fill="#e8daef" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="833.0">郷田真佑: インターン</text>
 <rect x="353.42857142857144" y="672.0" width="328.42857142857144" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="357.42857142857144" y="686.0">上田琉颯: インターン</text>
-<rect x="519.1428571428571" y="798.0" width="659.8571428571429" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
-<text class="event" x="523.1428571428571" y="812.0">細井亮太: 日本神経科学会(Neuro2026)</text>
+<rect x="353.42857142857144" y="840.0" width="494.1428571428572" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="854.0">爲佐信彦: 大事な試験Part2</text>
+<rect x="519.1428571428571" y="861.0" width="659.8571428571429" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
+<text class="event" x="523.1428571428571" y="875.0">細井亮太: 日本神経科学会(Neuro2026)</text>
 <rect x="22.0" y="937.0" width="162.71428571428572" height="18" fill="#d6eaf8" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="951.0">田中風舞: 大阪</text>
 <rect x="22.0" y="958.0" width="162.71428571428572" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
@@ -132,10 +144,14 @@
 <text class="event" x="26.0" y="993.0">細井亮太: 日本神経科学会(Neuro2026)</text>
 <rect x="22.0" y="1000.0" width="328.42857142857144" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="1014.0">大鶴康祐: 国際学会参加</text>
-<rect x="22.0" y="1021.0" width="991.2857142857144" height="18" fill="#e8daef" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="1035.0">郷田真佑: インターン</text>
-<rect x="22.0" y="1042.0" width="1157.0" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="1056.0">磯貝梢: 留学のため</text>
+<rect x="22.0" y="1021.0" width="494.1428571428571" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="1035.0">新康太朗: 試験勉強</text>
+<rect x="22.0" y="1042.0" width="991.2857142857144" height="18" fill="#e8daef" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="1056.0">郷田真佑: インターン</text>
+<rect x="22.0" y="1063.0" width="1157.0" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="1077.0">磯貝梢: 留学のため</text>
+<rect x="22.0" y="1084.0" width="1157.0" height="18" fill="#f5cba7" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="1098.0">須藤諒也: 院試勉強のため</text>
 <rect x="519.1428571428571" y="937.0" width="494.14285714285734" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="523.1428571428571" y="951.0">上田琉颯: インターン</text>
 <rect x="519.1428571428571" y="958.0" width="659.8571428571429" height="18" fill="#d6eaf8" stroke="#b0b0b0"/>

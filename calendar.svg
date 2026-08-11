@@ -44,9 +44,9 @@
 <text class="day-number" x="163.71428571428572" y="403.0">9</text>
 <rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="403.0">10</text>
-<rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="403.0">11</text>
-<rect x="517.1428571428571" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
+<rect x="517.1428571428571" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="403.0">12</text>
 <rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">13</text>
@@ -142,6 +142,8 @@
 <text class="event" x="357.42857142857144" y="631.0">爲佐信彦: ちいきわくりょこう</text>
 <rect x="353.42857142857144" y="638.0" width="825.5714285714286" height="18" fill="#cfe8ff" stroke="#b0b0b0"/>
 <text class="event" x="357.42857142857144" y="652.0">新田章仁: 旅行</text>
+<rect x="353.42857142857144" y="659.0" width="825.5714285714286" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="673.0">井筒凌: マッチング</text>
 <rect x="684.8571428571429" y="596.0" width="494.1428571428571" height="18" fill="#d1f2eb" stroke="#b0b0b0"/>
 <text class="event" x="688.8571428571429" y="610.0">小林愛実: 大会</text>
 <rect x="850.5714285714287" y="407.0" width="162.71428571428578" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
@@ -174,18 +176,26 @@
 <text class="event" x="26.0" y="917.0">髙原稜生: 学会と院試</text>
 <rect x="22.0" y="924.0" width="1157.0" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="938.0">松澤大稀: 院試勉強</text>
+<rect x="22.0" y="945.0" width="1157.0" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="959.0">井筒凌: マッチング</text>
 <rect x="187.71428571428572" y="672.0" width="825.5714285714287" height="18" fill="#e8daef" stroke="#b0b0b0"/>
 <text class="event" x="191.71428571428572" y="686.0">郷田真佑: インターン</text>
-<rect x="519.1428571428571" y="693.0" width="659.8571428571429" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
-<text class="event" x="523.1428571428571" y="707.0">爲佐信彦: 東京旅行</text>
+<rect x="187.71428571428572" y="693.0" width="825.5714285714287" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="707.0">上田琉颯: インターン</text>
+<rect x="519.1428571428571" y="714.0" width="659.8571428571429" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="523.1428571428571" y="728.0">爲佐信彦: 東京旅行</text>
 <rect x="22.0" y="937.0" width="494.1428571428571" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="951.0">松澤大稀: 院試勉強</text>
 <rect x="22.0" y="958.0" width="1157.0" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="972.0">磯貝梢: 留学のため</text>
 <rect x="22.0" y="979.0" width="1157.0" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="993.0">髙原稜生: 学会と院試</text>
-<rect x="353.42857142857144" y="1000.0" width="494.1428571428572" height="18" fill="#e8daef" stroke="#b0b0b0"/>
-<text class="event" x="357.42857142857144" y="1014.0">山﨑雄介: 研究など</text>
+<rect x="22.0" y="1000.0" width="1157.0" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="1014.0">井筒凌: マッチング</text>
+<rect x="353.42857142857144" y="1021.0" width="494.1428571428572" height="18" fill="#e8daef" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="1035.0">山﨑雄介: 研究など</text>
 <rect x="850.5714285714287" y="937.0" width="328.42857142857133" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
 <text class="event" x="854.5714285714287" y="951.0">大森優衣: マレーシア旅行</text>
+<rect x="1016.2857142857143" y="1021.0" width="162.71428571428567" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="1020.2857142857143" y="1035.0">福田敦也: 旅行</text>
 </svg>

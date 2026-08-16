@@ -40,9 +40,9 @@
 <text class="day-number" x="992.2857142857144" y="138.0">14</text>
 <rect x="1014.2857142857143" y="120.0" width="165.71428571428572" height="265.0" fill="#f7f7ff" stroke="#ddd"/>
 <text class="day-number" x="1158.0" y="138.0">15</text>
-<rect x="20.0" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="20.0" y="385.0" width="165.71428571428572" height="265.0" fill="#fff7f9" stroke="#ddd"/>
 <text class="day-number" x="163.71428571428572" y="403.0">16</text>
-<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
+<rect x="185.71428571428572" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="329.42857142857144" y="403.0">17</text>
 <rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="403.0">18</text>
@@ -164,18 +164,14 @@
 <text class="event" x="357.42857142857144" y="770.0">山﨑雄介: 研究など</text>
 <rect x="850.5714285714287" y="672.0" width="328.42857142857133" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
 <text class="event" x="854.5714285714287" y="686.0">大森優衣: マレーシア旅行</text>
-<rect x="1016.2857142857143" y="756.0" width="162.71428571428567" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
-<text class="event" x="1020.2857142857143" y="770.0">福田敦也: 旅行</text>
-<rect x="22.0" y="937.0" width="494.1428571428571" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="951.0">福田敦也: 旅行</text>
-<rect x="22.0" y="958.0" width="659.8571428571429" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="972.0">大森優衣: マレーシア旅行</text>
-<rect x="22.0" y="979.0" width="1157.0" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="993.0">磯貝梢: 留学のため</text>
-<rect x="22.0" y="1000.0" width="1157.0" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
-<text class="event" x="26.0" y="1014.0">髙原稜生: 学会と院試</text>
-<rect x="187.71428571428572" y="1021.0" width="991.2857142857142" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
-<text class="event" x="191.71428571428572" y="1035.0">旅行</text>
-<rect x="353.42857142857144" y="1042.0" width="825.5714285714286" height="18" fill="#e8daef" stroke="#b0b0b0"/>
-<text class="event" x="357.42857142857144" y="1056.0">山﨑雄介: 諸用</text>
+<rect x="22.0" y="937.0" width="659.8571428571429" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="951.0">大森優衣: マレーシア旅行</text>
+<rect x="22.0" y="958.0" width="1157.0" height="18" fill="#fdebd0" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="972.0">磯貝梢: 留学のため</text>
+<rect x="22.0" y="979.0" width="1157.0" height="18" fill="#f9e79f" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="993.0">髙原稜生: 学会と院試</text>
+<rect x="187.71428571428572" y="1000.0" width="991.2857142857142" height="18" fill="#d5f5e3" stroke="#b0b0b0"/>
+<text class="event" x="191.71428571428572" y="1014.0">旅行</text>
+<rect x="353.42857142857144" y="1021.0" width="825.5714285714286" height="18" fill="#e8daef" stroke="#b0b0b0"/>
+<text class="event" x="357.42857142857144" y="1035.0">山﨑雄介: 諸用</text>
 </svg>

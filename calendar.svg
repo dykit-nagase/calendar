@@ -46,9 +46,9 @@
 <text class="day-number" x="329.42857142857144" y="403.0">16</text>
 <rect x="351.42857142857144" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="495.1428571428571" y="403.0">17</text>
-<rect x="517.1428571428571" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
+<rect x="517.1428571428571" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="660.8571428571429" y="403.0">18</text>
-<rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
+<rect x="682.8571428571429" y="385.0" width="165.71428571428572" height="265.0" fill="#fbff00" stroke="#ddd"/>
 <text class="day-number" x="826.5714285714287" y="403.0">19</text>
 <rect x="848.5714285714287" y="385.0" width="165.71428571428572" height="265.0" fill="#ffffff" stroke="#ddd"/>
 <text class="day-number" x="992.2857142857144" y="403.0">20</text>
@@ -102,4 +102,6 @@
 <text class="event" x="26.0" y="951.0">郷田真佑: 学会</text>
 <rect x="22.0" y="958.0" width="494.1428571428571" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
 <text class="event" x="26.0" y="972.0">金優奈: テスト</text>
+<rect x="22.0" y="979.0" width="1157.0" height="18" fill="#f6ddcc" stroke="#b0b0b0"/>
+<text class="event" x="26.0" y="993.0">山下颯太: TOEIC</text>
 </svg>
